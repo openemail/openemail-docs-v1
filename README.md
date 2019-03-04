@@ -1,3 +1,3 @@
-# mailcow dockerized documentation
+# openemail documentation
 
 https://docs.openemail.io
