@@ -1,5 +1,5 @@
 
-## What is openemail
+## What is openemail - Open Source Mail Server in Dockers 
 
 At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
