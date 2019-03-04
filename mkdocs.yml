@@ -3,7 +3,7 @@ site_url: https://openemail.github.io/
 copyright: 'Copyright 2019 Chinthaka Deshapriya'
 repo_name: openemail/openemail
 repo_url: https://github.com/openemail/openemail-docs
-edit_uri: edit/master/docs/
+edit_uri: /edit/master/docs/
 theme: 
   name: 'material'
   palette:
