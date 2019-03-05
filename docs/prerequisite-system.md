@@ -11,7 +11,7 @@ Before you run **openemail**, there are a few requirements that you should check
 
 ## Choosing a Linux Dribution for the Docker host ##
 
-During the creation of this installation guide I have used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you make it prepare to get working in your  Linux distribution of choice for your docker host. It may be Ubuntu, Debian, CentOS , or an another.
+During the creation of this installation guide I have used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you can make it prepare to get working in your Linux distribution of choice as your docker host. It may be Ubuntu, Debian, CentOS, or an another.
 
 ## Minimum System Resources
 
