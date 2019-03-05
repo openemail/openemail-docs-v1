@@ -62,7 +62,25 @@ To bind a service to an IP address, you can prepend the IP like this: `SMTP_PORT
 
 **Important**: You cannot use IP:PORT bindings in HTTP_PORT and HTTPS_PORT. Please use `HTTP_PORT=1234` and `HTTP_BIND=1.2.3.4` instead.
 
-## Date and Time
+## Setting Date and Time
+
+You need to ensure that date and time is accurate. This is required for the operation of openemail as well and accurate system logging.
+### To check your current time run:
+```
+$ timedatectl status
+```
+You will get an output like below
+
+```
+                      Local time: Tue 2019-03-05 09:17:54 UTC
+                  Universal time: Tue 2019-03-05 09:17:54 UTC
+                        RTC time: Tue 2019-03-05 09:17:55
+                       Time zone: Etc/UTC (UTC, +0000)
+       System clock synchronized: yes
+systemd-timesyncd.service active: no
+                 RTC in local TZ: no
+```
+
 
 To ensure that you have the correct date and time setup on your system, please check the output of `timedatectl status`:
 
