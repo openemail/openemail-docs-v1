@@ -77,9 +77,36 @@ You will get an output like below
                         RTC time: Tue 2019-03-05 09:17:55
                        Time zone: Etc/UTC (UTC, +0000)
        System clock synchronized: yes
+                      Local time: Tue 2019-03-05 09:17:54 UTC
+                  Universal time: Tue 2019-03-05 09:17:54 UTC
+                        RTC time: Tue 2019-03-05 09:17:55
+                       Time zone: Etc/UTC (UTC, +0000)
+       System clock synchronized: yes
 systemd-timesyncd.service active: no
                  RTC in local TZ: no
+                 RTC in local TZ: no
 ```
+The value `systemd-timesyncd.service active: no` means your system hasn't been configured get it time synced using `systemd-timesyncd`
+### To set your system time to sync with `systemd-timesyncd` run:
+
+```
+$ sudo sudo timedatectl set-ntp on
+```
+Now run again
+
+```
+$ timedatectl status
+```
+You will see this time `systemd-timesyncd.service active: yes` as in the below output
+`
+                      Local time: Tue 2019-03-05 09:26:24 UTC
+                  Universal time: Tue 2019-03-05 09:26:24 UTC
+                        RTC time: Tue 2019-03-05 09:26:25
+                       Time zone: Etc/UTC (UTC, +0000)
+       System clock synchronized: yes
+systemd-timesyncd.service active: yes
+`
+
 
 
 To ensure that you have the correct date and time setup on your system, please check the output of `timedatectl status`:
