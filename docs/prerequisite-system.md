@@ -9,6 +9,10 @@ Before you run **openemail**, there are a few requirements that you should check
     - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics](prerequisite-dns/#the-minimal-dns-configuration) covered before you begin!
     - Make sure that your system has a correct date and [time setup](#date-and-time). This is crucial for stuff like two factor TOTP authentication.
 
+## Choosing a Linux Dribution for the Docker host ##
+
+During the creation of this installation guide I have used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you make it prepare to get working in your  Linux distribution of choice for your docker host. It may be Ubuntu, Debian, CentOS , or an another.
+
 ## Minimum System Resources
 
 Please make sure that your system has at least the following resources:
@@ -36,11 +40,11 @@ Please check if any of openemail's standard ports are open and not in use by oth
 
 **
 
-If this command returns any results please remove or stop the application running on that port. You may also adjust mailcows ports via the `mailcow.conf` configuration file.
+If this command returns any results please remove or stop the application running on that port. You may also adjust openemail ports via the openemail.conf` configuration file.
 
 ### Default Ports
 
-If you have a firewall in front of mailcow, please make sure that these ports are open for incoming connections:
+If you have a firewall in front of openemail, please make sure that these ports are open for incoming connections:
 
 | Service             | Protocol | Port   | Container         | Variable                         |
 | --------------------|:--------:|:-------|:------------------|----------------------------------|
@@ -72,7 +76,7 @@ $ timedatectl status
 systemd-timesyncd.service active: yes
                  RTC in local TZ: no
 ```
-The lines `NTP enabled: yes` and `NTP synchronized: yes` indicate wether you have NTP enabled and if it's synchronized.
+The lines `systemd-timesyncd.service active: yes` and `NTP indicates that you have NTP enabled and it's synchronized.
 
 To enable NTP you need to run the command `timedatectl set-ntp true`. You also need to edit your `/etc/systemd/timesyncd.conf`:
 
