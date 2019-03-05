@@ -53,8 +53,7 @@ The integrated **openemail UI** allows administrative work on your mail server i
 - Quarantine system
 - A lot more...
 
-mailcow: dockerized comes with multiple containers linked in one bridged network.
-Each container represents a single application.
+openemail: It comes with multiple containers linked in one bridged network. Each container represents a single application.
 
 - Dovecot
 - ClamAV (optional)
