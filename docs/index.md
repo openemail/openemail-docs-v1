@@ -53,7 +53,7 @@ The integrated **openemail UI** allows administrative work on your mail server i
 - Quarantine system
 - A lot more...
 
-openemail: It comes with multiple containers linked in one bridged network. Each container represents a single application.
+openemailcomes with multiple containers linked in one bridged network. Each container represents a single application.
 
 - Dovecot
 - ClamAV (optional)
