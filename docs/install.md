@@ -55,6 +55,7 @@ sub   rsa4096 2017-02-22 [S]
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 **Install docker-ce**
+
 **1\.** Update the `apt` package index.
 ```
 sudo apt-get update
@@ -74,9 +75,7 @@ This command downloads a test image and runs it in a container. When the contain
 sudo systemctl enable docker.service
 ```
 !!!Note
-If you are planing to use CentOS as your **openemai** docker host please follow the official [CentOS docker-ce Installation Guide](https://docs.docker.com/install/linux/docker-ce/centos/)
-
-
+    If you are planing to use CentOS as your **openemai** docker host please follow the official [CentOS docker-ce Installation Guide](https://docs.docker.com/install/linux/docker-ce/centos/)
 
 - Docker-Compose
 ```
