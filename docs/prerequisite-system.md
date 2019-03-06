@@ -38,13 +38,12 @@ Please check if any of openemail's standard ports are open and not in use by oth
     There are several problems with running openemail on a firewalld/ufw enabled system. You should disable it (if possible) and move your ruleset to the DOCKER-USER chain, which is not cleared by a Docker service restart, instead. See [this blog post](https://blog.donnex.net/docker-and-iptables-filtering/) for information about how to use iptables-persistent with the DOCKER-USER chain.
     As openemail runs dockerized, INPUT rules have no effect on restricting access to openemail. Use the FORWARD chain instead.
 
-**
 
 If this command returns any results please remove or stop the application running on that port. You may also adjust openemail ports via the openemail.conf` configuration file.
 
 ### Default Ports
 
-If you have a firewall in front of openemail, please make sure that these ports are open for incoming connections:
+If you have a firewall in front of openemail docker host, please make sure that these ports are open for incoming connections:
 
 | Service             | Protocol | Port   | Container         | Variable                         |
 | --------------------|:--------:|:-------|:------------------|----------------------------------|
@@ -92,7 +91,7 @@ The value `systemd-timesyncd.service active: no` means your system hasn't been c
 ```
 $ sudo sudo timedatectl set-ntp on
 ```
-Now run again
+Now run again run `timedatectl status`. You will observe that `systemd-timesyncd.service active: yes`
 
 ```
 $ timedatectl status
@@ -105,64 +104,110 @@ You will see this time `systemd-timesyncd.service active: yes` as in the below o
                        Time zone: Etc/UTC (UTC, +0000)
        System clock synchronized: yes
 systemd-timesyncd.service active: yes
-`
 
-
-
-To ensure that you have the correct date and time setup on your system, please check the output of `timedatectl status`:
+### To check to see whether `systemd-timesyncd` is running:
 
 ```
-$ timedatectl status
-                        Local time: Tue 2019-03-05 06:00:04 UTC
-                  Universal time: Tue 2019-03-05 06:00:04 UTC
-                        RTC time: Tue 2019-03-05 06:00:05
-                       Time zone: Etc/UTC (UTC, +0000)
-       System clock synchronized: yes
-systemd-timesyncd.service active: yes
-                 RTC in local TZ: no
-```
-The lines `systemd-timesyncd.service active: yes` and `NTP indicates that you have NTP enabled and it's synchronized.
-
-To enable NTP you need to run the command `timedatectl set-ntp true`. You also need to edit your `/etc/systemd/timesyncd.conf`:
-
-```
-# vim /etc/systemd/timesyncd.conf
-[Time]
-Servers=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
-```
-```
-$ chronyc tracking 
-Reference ID    : 8B633576 (ip118.ip-139-99-53.net)
-Stratum         : 3
-Ref time (UTC)  : Tue Mar 05 06:22:37 2019
-System time     : 0.000017628 seconds slow of NTP time
-Last offset     : -0.000009700 seconds
-RMS offset      : 0.000059413 seconds
-Frequency       : 0.034 ppm fast
-Residual freq   : -0.002 ppm
-Skew            : 0.146 ppm
-Root delay      : 0.001954436 seconds
-Root dispersion : 0.001475935 seconds
-Update interval : 130.1 seconds
-Leap status     : Normal
+sudo systemctl status systemd-timesyncd
 ```
 
-## Hetzner Cloud (and probably others)
+If it is not running you will get an output like below.
+```
+systemctl status systemd-timesyncd
+● systemd-timesyncd.service - Network Time Synchronization
+   Loaded: loaded (/lib/systemd/system/systemd-timesyncd.service; enabled; vendor preset: enabled)
+   Active: inactive (dead) since Wed 2019-03-06 03:18:40 UTC; 2s ago
+     Docs: man:systemd-timesyncd.service(8)
+  Process: 21020 ExecStart=/lib/systemd/systemd-timesyncd (code=exited, status=0/SUCCESS)
+ Main PID: 21020 (code=exited, status=0/SUCCESS)
+   Status: "Idle."
 
-Check `/etc/network/interfaces.d/50-cloud-init.cfg` and change the IPv6 interface from eth0:0 to eth0:
+Mar 05 09:26:13 mail.openemail.io systemd[1]: Starting Network Time Synchronization...
+Mar 05 09:26:13 mail.openemail.io systemd[1]: Started Network Time Synchronization.
+Mar 05 09:26:13 mail.openemail.io systemd-timesyncd[21020]: Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com).
+Mar 06 03:18:40 mail.openemail.io systemd[1]: Stopping Network Time Synchronization...
+Mar 06 03:18:40 mail.openemail.io systemd[1]: Stopped Network Time Synchronization.
+```
+### To start `systemd-timesyncd` run:
 
 ```
-# Wrong:
-auto eth0:0
-iface eth0:0 inet6 static
-# Right:
-auto eth0
-iface eth0 inet6 static
+sudo systemctl start systemd-timesyncd
 ```
 
-Reboot or restart the interface.
-You may want to [disable cloud-init network changes.](https://wiki.hetzner.de/index.php/Cloud_IP_static/en#disable_cloud-init_network_changes)
+### To see the status of `systemd-timesyncd` run:
 
-## MTU
+```
+sudo systemctl status systemd-timesyncd
+```
 
-Especially relevant for OpenStack users: Check your MTU and set it accordingly in docker-compose.yml. See **4.1** in [our installation docs](https://mailcow.github.io/mailcow-dockerized-docs/install/).
+Your output should be like below
+
+```
+● systemd-timesyncd.service - Network Time Synchronization
+   Loaded: loaded (/lib/systemd/system/systemd-timesyncd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2019-03-06 03:30:08 UTC; 8s ago
+     Docs: man:systemd-timesyncd.service(8)
+ Main PID: 29018 (systemd-timesyn)
+   Status: "Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com)."
+    Tasks: 2 (limit: 2361)
+   CGroup: /system.slice/systemd-timesyncd.service
+           └─29018 /lib/systemd/systemd-timesyncd
+
+Mar 06 03:30:08 mail.openemail.io systemd[1]: Starting Network Time Synchronization...
+Mar 06 03:30:08 mail.openemail.io systemd[1]: Started Network Time Synchronization.
+Mar 06 03:30:08 mail.openemail.io systemd-timesyncd[29018]: Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com).
+```
+## Set up static IP for Ubuntu 18.04
+
+Ubuntu 18.04 has changed its network interface configuration subsystem with new netplan configuration. The yml syntaxes are used in network configuration.
+
+### To configure the network
+
+```
+sudo nano  /etc/netplan/50-cloud-init.yaml
+```
+
+Below is an example configuration. Adjust settings as per your network environment.
+
+```
+network:
+    version: 2
+    ethernets:
+        eth0:
+            addresses:
+            - 178.128.57.210/20
+            gateway4: 178.128.48.1
+            match:
+                macaddress: 0a:17:6b:4f:06:ed
+            nameservers:
+                addresses:
+                - 67.207.67.2
+                - 67.207.67.3
+                search: []
+            set-name: eth0
+```
+### To update your settings run:
+```
+sudo netplan apply
+```
+
+### To check your network configuration run
+
+```
+ip addr sh eth0
+```
+
+You will get an output like Below
+
+```
+eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+   link/ether 0a:17:6b:4f:06:ed brd ff:ff:ff:ff:ff:ff
+   inet 178.128.57.210/20 brd 178.128.63.255 scope global eth0
+      valid_lft forever preferred_lft forever
+   inet6 fe80::817:6bff:fe4f:6ed/64 scope link
+      valid_lft forever preferred_lft forever
+```
+
+## Setting MTU
+
+If you are running openemail in OpenStack environment: Check your MTU and set it accordingly in docker-compose.yml. See **4.1** in [our installation docs](https://docs.openemail.io/install/).
