@@ -1,9 +1,9 @@
 !!! warning
     Make sure you've read ["Prepare Your System"](https://docs.openemail.io/prerequisite-system/) before proceeding!
 
-You need to install Docker and Docker Compose to setup **openemail** for your domain.
+You need to install `Docker` and `Docker Compose` to setup **openemail** for your domain.
 
-**1\.** Learn how to install [Docker](https://docs.docker.com/engine/installation/linux/) and [Docker Compose](https://docs.docker.com/compose/install/).
+This section will help you to learn how to install [Docker](https://docs.docker.com/engine/installation/linux/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
 ## Installing Docker Community Edition on Ubuntu
 
@@ -77,50 +77,76 @@ sudo systemctl enable docker.service
 !!!Note
     If you are planing to use CentOS as your **openemai** docker host please follow the official [CentOS docker-ce Installation Guide](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-- Docker-Compose
-```
-curl -L https://github.com/docker/compose/releases/download/$(curl -Ls https://www.servercow.de/docker-compose/latest.php)/docker-compose-$(uname -s)-$(uname -m) > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-```
+## Install Compose on Linux systems
 
-Please use the latest Docker engine available and do not use the engine that ships with your distros repository.
+On Linux, you can download the Docker Compose binary from the [Compose repository release page on GitHub](https://github.com/docker/compose/releases). Follow the instructions from the link, which involve running the curl command in your terminal to download the binaries. These step by step instructions are also included below.
 
-**2\.** Clone the master branch of the repository, make sure your umask equals 0022.
+**1.\** Run this command to download the latest version of Docker Compose:
 ```
-# umask
-0022
-# cd /opt
-# git clone https://github.com/mailcow/mailcow-dockerized
-# cd mailcow-dockerized
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+**2\.** Apply executable permissions to the binary:
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+!!! Note
+    If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
 
-**3\.** Generate a configuration file. Use a FQDN (`host.domain.tld`) as hostname when asked.
+For example:
+```
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+**3\.** Test your installation
+```
+docker-compose --version
+```
+## Cloning openemail  repository
+
+Clone the master branch of the repository, make sure your `umask` equals 0022.
+```
+sudo su -
+umask
+cd /opt
+git clone https://github.com/openemail/openemail.git
+cd openemail
+
+
+```
+## Generating openemail.conf
+
+Generate a configuration file. Use a FQDN (`host.domain.tld`) as hostname when asked.
+
 ```
 ./generate_config.sh
 ```
+## Customize the configuration
 
-**4\.** Change configuration if you want or need to.
+Change configuration if you want or need to.
 ```
-nano mailcow.conf
+nano openemail.conf
 ```
 If you plan to use a reverse proxy, you can, for example, bind HTTPS to 127.0.0.1 on port 8443 and HTTP to 127.0.0.1 on port 8080.
 
 You may need to stop an existing pre-installed MTA which blocks port 25/tcp. See [this chapter](https://mailcow.github.io/mailcow-dockerized-docs/firststeps-local_mta/) to learn how to reconfigure Postfix to run besides mailcow after a successful installation.
 
-**4\.1\.** OpenStack users and users with a MTU not equal to 1500:
+## Setup MTU
+
+OpenStack users and users with a MTU not equal to 1500:
 
 Edit `docker-compose.yml` and change the network settings according to your MTU.
 Add the new driver_opts parameter like this:
+
 ```
 networks:
-  mailcow-network:
+  openemail-network:
     ...
     driver_opts:
       com.docker.network.driver.mtu: 1450
     ...
 ```
+## Pull openemail docker images
 
-**5\.** Pull the images and run the composer file. The parameter `-d` will start mailcow: dockerized detached:
+Pull the images and run the composer file. The parameter `-d` will start openemail docker containers detached:
 ```
 docker-compose pull
 docker-compose up -d
@@ -128,6 +154,6 @@ docker-compose up -d
 
 Done!
 
-You can now access **https://${MAILCOW_HOSTNAME}** with the default credentials `admin` + password `moohoo`.
+You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` + password `openemail`.
 
 The database will be initialized right after a connection to MySQL can be established.
