@@ -1,15 +1,15 @@
 
-## What is openemail - Open Source Mail Server in Dockers 
+## What is openemail - Open Source Mail Server in Dockers
 
 At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
-Our administration backend web UI is a fork of [Mailcow](https://mailcow.email/) project. We are deeeply indebted to their excellent effort in making such a good consolidation of all complex backend tools into a single pane of web UI by making it very easy for administrators to manage the system without using complex command line tools and editing. 
+Our administration backend web UI is a fork of [Mailcow](https://mailcow.email/) project. We are deeeply indebted to their excellent effort in making such a good consolidation of all complex backend tools into a single pane of web UI by making it very easy for administrators to manage the system without using complex command line tools and editing.
 
-Inspired by the concept of [Mailcow](https://mailcow.email/) each an every backend application in openemai is running in a docker container by making openemail as a software that is ready deploy in your private or public cloud infrastructure by utilizing the benefit of agile and elastic cloud infrastructure of the modern day computing. 
+Inspired by the concept of [Mailcow](https://mailcow.email/) each an every backend application in openemai is running in a docker container by making openemail as a software that is ready deploy in your private or public cloud infrastructure by utilizing the benefit of agile and elastic cloud infrastructure of the modern day computing.
 
 openemail has been designed to work as a highly scalable and agile software which you can use it to host from few mailboxes to millions of mailboxes which are required by services providers.  
 
-As like any other  open source software  you are  free to use openemail at your own risk while you can obtained it as a supported and enterprise ready solution which is backed by [Cybergate](https://cybergate.lk) with its world class open source support team. 
+As like any other  open source software  you are  free to use openemail at your own risk while you can obtained it as a supported and enterprise ready solution which is backed by [Cybergate](https://cybergate.lk) with its world class open source support team.
 
 Our enterprise support  subscriptions are supporting unlimited mail domains and accounts while our subscription is an annual SLA which is confined to several support levels of support types and hardware profiles, either physical or virtual, of the systems that you will be using to deploy openemail. You can have both on premise and hosted solution under these subscription contracts.
 
@@ -17,9 +17,17 @@ Our enterprise support  subscriptions are supporting unlimited mail domains and 
 
 ### Commercial support
 
-For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/openemail#support).
+For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
 
-A fully featured managed mailcow is also available [here](https://www.servercow.de/mailcow#managed).
+A fully featured managed **openemaill** is also available. Please contact [Amila](+(94)77316545) for more details
+
+## Migrate to openemaill at no cost
+
+We are happy to announce you that you can easily migrate from Zimbra, Microsoft Exchange & Office 365 hosted email or any other email service without compromising any of the major email and collaboration features like Addressbook, Calendar, Task and Contact sharing, public folders, resource sharing, Microsoft Outlook and Mobile Sync with native ActiveSync protocol.
+
+## openemail is Absolutely Free
+
+As you well aware that email is by far the most widely use business application of the Internet. A single owner business to large enterprise primarily rely on email as their first line of business communication. The intention of this comprehensive free guide is to help you getting **openermail** deployed FREE if you have in house systems engineering skills. openemail is 100% free in terms of software licensing that blocks you from scaling your business.  
 
 ### Community support
 
