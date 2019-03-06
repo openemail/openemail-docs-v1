@@ -38,7 +38,7 @@ Make sure that the PTR record of your IP matches the FQDN of your openemal host:
 ### To find the IP of your `MX` run:
 
 ```
-$ dig mail.openemail.io +short
+dig mail.openemail.io +short
 ```
 The above query should return an `IP` address like below.
 ```
@@ -46,7 +46,7 @@ The above query should return an `IP` address like below.
 ```
 ### To find your PTR record run:
 ```
-$ host  68.183.186.231
+host  68.183.186.231
 ```
 You will get an output like Below
 ```
@@ -120,7 +120,7 @@ You can setup a TXT record for your domains' DMARC using the example below.
 **To query DNS for an existing entry you can run:**
 
 ```
-$ dig TXT _dmarc.openemail.io  +short
+dig TXT _dmarc.openemail.io  +short
 ```
 You will get an output like below.
 
