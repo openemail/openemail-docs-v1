@@ -1,9 +1,9 @@
 
 ## What is openemail - It is dockerized, free and open source mail server
 
-At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
+At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, and email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide highly agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
-Our administration backend web UI is a fork of [Mailcow](https://mailcow.email/) project. We are deeeply indebted to their excellent effort in making such a good consolidation of all complex backend tools into a single pane of web UI by making it very easy for administrators to manage the system without using complex command line tools and editing.
+Our administration backend web UI is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend tools into a single pane of web UI by making it very easy for administrators to manage the system without using complex command line tools and editing.
 
 Inspired by the concept of [Mailcow](https://mailcow.email/) each an every backend application in openemai is running in a docker container by making openemail as a software that is ready deploy in your private or public cloud infrastructure by utilizing the benefit of agile and elastic cloud infrastructure of the modern day computing.
 
@@ -11,7 +11,7 @@ openemail has been designed to work as a highly scalable and agile software whic
 
 As like any other  open source software  you are  free to use openemail at your own risk while you can obtained it as a supported and enterprise ready solution which is backed by [Cybergate](https://cybergate.lk) with its world class open source support team.
 
-Our enterprise support  subscriptions are supporting unlimited mail domains and accounts while our subscription is an annual SLA which is confined to several support levels of support types and hardware profiles, either physical or virtual, of the systems that you will be using to deploy openemail. You can have both on premise and hosted solution under these subscription contracts.
+Our enterprise support  subscriptions are supporting unlimited mail domains and accounts while our subscription is an annual SLA which is confined to several support levels of support types and hardware profiles, either physical or virtual, of the systems that you will be using to deploy openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as openemail is 100% free.
 
 ## Get support
 
@@ -52,12 +52,11 @@ You can fine grain openemail's spam filtering backend per email box basis by mak
 
 ## Backup and Restore
 
-openemail has provided you  all required tools for backup and restoring helping administrators to  have goodnight sleep and enjoy their holidays. You can sync your backup to your own FTP server or any public cloud storage like Amazon S3, Google Bucket or any other.
+openemail has provided you  all required tools for backup and restoring helping administrators to  have goodnight sleep and enjoy their holidays. You can sync your backup to your own FTP server or any other public cloud storage like Amazon S3, Google Bucket or any other.
 
 ## Domain based administration
 
 openemail supports multiple domains in a single installation with domain based administration making the delegation of administration is breezy and easy.
-
 
 ## openemail Demo
 
