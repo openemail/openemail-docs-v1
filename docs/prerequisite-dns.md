@@ -98,6 +98,14 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 
 ![](images/openemail-dkim-add.png)
 
+Do the following step  which are marked in red color
+
+**1\.** Click on `Select domains with missing keys`
+
+**2\.** Set dkim key lenths as '2048'
+
+**3\.** Press `Add` button
+
 ```
 $ dig TXT _dmarc.openemail.io  +short
 ```
