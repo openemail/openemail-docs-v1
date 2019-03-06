@@ -27,7 +27,7 @@ We are happy to announce you that you can easily migrate from Zimbra, Microsoft 
 
 ## openemail is Absolutely Free
 
-As you well aware that email is by far the most widely use business application of the Internet. A single owner business to large enterprise primarily rely on email as their first line of business communication. The intention of this comprehensive free guide is to help you getting **openemail** deployed FREE if you have in house systems engineering skills. openemail is 100% free in terms of software licensing that blocks you from scaling your business.
+You are well aware that email is by far the most widely use business application of the Internet. From a single owner business to large enterprise primarily rely on email as their first line of business communication. The intention of this comprehensive free guide is to help you getting **openemail** deployed FREE if you have in house systems engineering skills. openemail is 100% free in terms of software licensing that blocks you from scaling your business.
 
 ## Security is our Priority
 
@@ -64,7 +64,7 @@ You can find a demo at [hasuna.openemail.io](https://hasuna.openemail.io), use t
 - **Domain administrator**: domainadm / openemail
 - **Mailbox**: demo@openemaill.io / openemail
 
-## Overview
+## Feature Overview
 
 The integrated **openemail UI** allows administrative work on your mail server instance as well as separated domain administrator and mailbox user access:
 
