@@ -96,9 +96,7 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 ```
 ### Creating DKIM key in openemal UI
 
-![](images/openemail-dkim-add.png)
-
-Do the following step  which are marked in red color
+Do the following step  which are marked in red color in configuration window screenshot of openemail-UI below.
 
 **1\.** Click on `Select domains with missing keys`
 
@@ -106,11 +104,16 @@ Do the following step  which are marked in red color
 
 **3\.** Press `Add` button
 
+![](images/openemail-dkim-add.png)
+
+
 ### Setup DMARC record
 
 You can setup a TXT record for your domains' DMARC using the example below.
 
 You can query DnS like below to check how a DMARC record has been setup  
+
+**To query DNS for an existing entry you can run:**
 
 ```
 $ dig TXT _dmarc.openemail.io  +short
@@ -125,7 +128,7 @@ The corresponding DNS zone file entry that we have added for this purpose is lik
 _dmarc    IN    TXT   "v=DMARC1; p=quarantine; pct=5; rua=mailto:postmaster@openemail.io"
 
 ```
-S## The advanced DNS configuration
+## The advanced DNS configuration
 
 **SRV** records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.example.org."). Please refer to [RFC 2782](https://tools.ietf.org/html/rfc2782). for more details.
 
