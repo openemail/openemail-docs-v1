@@ -33,7 +33,7 @@ sudo apt-get update
 ```
 **2\.** install packages to allow apt to use a repository over HTTPS:
 ```
-$ sudo apt-get install apt-transport-https  ca-certificates curl  gnupg-agent software-properties-common
+sudo apt-get install apt-transport-https  ca-certificates curl  gnupg-agent software-properties-common
 ```
 **3.** Add Docker’s official GPG key:
 ```
@@ -54,17 +54,29 @@ sub   rsa4096 2017-02-22 [S]
 ```
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
-
-
-
-
-- Docker
+**Install docker-ce**
+**1\.** Update the `apt` package index.
 ```
-curl -sSL https://get.docker.com/ | CHANNEL=stable sh
-# After the installation process is finished, you may need to enable the service and make sure it is started (e.g. CentOS 7)
-systemctl enable docker.service
-systemctl start docker.service
+sudo apt-get update
 ```
+**2\.** Install the latest version of Docker CE and containerd.
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+**3\.** Verify that Docker CE is installed correctly by running the hello-world image.
+```
+sudo docker run hello-world
+```
+This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.
+
+**4\.** You may need to enable the service
+```
+sudo systemctl enable docker.service
+```
+!!!Note
+If you are planing to use CentOS as your **openemai** docker host please follow the official [CentOS docker-ce Installation Guide](https://docs.docker.com/install/linux/docker-ce/centos/)
+
+
 
 - Docker-Compose
 ```
