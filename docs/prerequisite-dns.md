@@ -102,14 +102,21 @@ Do the following step  which are marked in red color
 
 **1\.** Click on `Select domains with missing keys`
 
-**2\.** Set dkim key lenths as '2048'
+**2\.** Set `dkim` key length as `2048`
 
 **3\.** Press `Add` button
+
+### Setup DMARC record
+
+You can setup a TXT record for your domains' DMARC using the example below.
+
+You can query DnS like below to check how a DMARC record has been setup  
 
 ```
 $ dig TXT _dmarc.openemail.io  +short
 ```
 You will get an output like below.
+
 ```
 "v=DMARC1; p=quarantine; pct=5; rua=mailto:postmaster@openemail.io"
 ```
@@ -118,7 +125,7 @@ The corresponding DNS zone file entry that we have added for this purpose is lik
 _dmarc    IN    TXT   "v=DMARC1; p=quarantine; pct=5; rua=mailto:postmaster@openemail.io"
 
 ```
-## The advanced DNS configuration
+S## The advanced DNS configuration
 
 **SRV** records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.example.org."). Please refer to [RFC 2782](https://tools.ietf.org/html/rfc2782). for more details.
 
