@@ -1,12 +1,62 @@
 !!! warning
-    Make sure you've read ["Prepare Your System"](https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system) before proceeding!
+    Make sure you've read ["Prepare Your System"](https://docs.openemail.io/prerequisite-system/) before proceeding!
 
-
-You need Docker and Docker Compose.
+You need to install Docker and Docker Compose to setup **openemail** for your domain.
 
 **1\.** Learn how to install [Docker](https://docs.docker.com/engine/installation/linux/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-Quick installation for most operation systems:
+## Installing Docker Community Edition on Ubuntu
+
+To install Docker CE, you need the 64-bit version of one of these Ubuntu versions:
+
+- Cosmic 18.10
+- Bionic 18.04 (LTS)
+- Xenial 16.04 (LTS)
+
+In this guide I am using Bionic 18.04 (LTS)
+
+**Uninstall old versions**
+
+Older versions of Docker were called `docker, docker.io , or docker-engine.` If these are installed, uninstall them:
+```
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+**Install using the repository**
+
+Before you install Docker CE for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.
+
+**Setup the repository**
+
+**1\.** Update the apt package index:
+```
+sudo apt-get update
+```
+**2\.** install packages to allow apt to use a repository over HTTPS:
+```
+$ sudo apt-get install apt-transport-https  ca-certificates curl  gnupg-agent software-properties-common
+```
+**3.** Add Docker’s official GPG key:
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.
+```
+sudo apt-key fingerprint 0EBFCD88
+```
+You should get an output like below.
+```
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+```
+**4\.** Use the following command to set up the stable repository.
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+
+
+
 
 - Docker
 ```
