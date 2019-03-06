@@ -153,7 +153,7 @@ docker-compose up -d
 ```
 
 Done!
-## access openemail UI
+## Accessing openemail UI
 
 You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` + password `openemail`.
 
