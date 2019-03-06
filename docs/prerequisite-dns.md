@@ -94,11 +94,10 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtIfYQWd16SotLpDAIe+9CRda6+KmExTSM4lQsO8XsbJsECqEuUer+xrJTVA4N5tEM53MeuH36tCjsKynlKMKmNQtMpblg3fHL0Z57FUyAUoHO9GOK1lS8vOA5wbf68FQ06YHAd/Dgq21/sYrERnnXYVvH5jSA44YBfiwrvuzopl/ekMp71WJMR73TmEQ1BTf6SZA6STvCJVj8d"
 	  "pAuLekL1EYQzsGsp1kcOFYOee9c9VjfgkuZnJkAkQmz94L3YTd/08i6rZrKUSRXcx8dfitx7k12IrBsKCqlXgRIpWYWJW58gAM1Fif6gjDmugj4mAIQJ4oyWJdNDZPYpKEG+6VQQIDAQAB" )  ; ----- DKIM key dkim for openemail.io
 ```
-### Creating a DMARC record
+### Creating DKIM key in openemal UI
 
-The last step in protecting yourself and others is the implementation of a **DMARC** TXT record, for example by using the [DMARC Assistant](http://www.kitterman.com/dmarc/assistant.html) ([check](https://dmarcian.com/dmarc-inspector/google.com)).
+![](images/openemail-dkim-add.png)
 
-If you have already setup a DMARC record for your domain you can query it and find like below.
 ```
 $ dig TXT _dmarc.openemail.io  +short
 ```
