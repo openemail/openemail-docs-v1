@@ -96,7 +96,7 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 ```
 ### Creating DKIM key in openemal UI
 
-Do the following step  which are marked in red color in configuration window screenshot of openemail-UI below.
+Do the following steps  which are marked in red color in the  configuration window screenshot of **openemail-UI** below.
 
 **1\.** Click on `Select domains with missing keys`
 
@@ -110,8 +110,6 @@ Do the following step  which are marked in red color in configuration window scr
 ### Setup DMARC record
 
 You can setup a TXT record for your domains' DMARC using the example below.
-
-You can query DnS like below to check how a DMARC record has been setup  
 
 **To query DNS for an existing entry you can run:**
 
