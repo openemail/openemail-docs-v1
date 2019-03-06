@@ -19,7 +19,7 @@ Our enterprise support  subscriptions are supporting unlimited mail domains and 
 
 For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
 
-A fully featured managed **openemaill** is also available. Please contact [Amila](+(94)77316545) for more details
+A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545) for more details
 
 ## Migrate to openemaill at no cost
 
