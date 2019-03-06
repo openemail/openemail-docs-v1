@@ -1,5 +1,5 @@
 
-## What is openemail - Open Source Mail Server in Dockers
+## What is openemail - It is dockerized, free and open source mail server
 
 At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
@@ -19,22 +19,44 @@ Our enterprise support  subscriptions are supporting unlimited mail domains and 
 
 For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
 
-A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545) for more details
+A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
 
 ## Migrate to openemaill at no cost
 
-We are happy to announce you that you can easily migrate from Zimbra, Microsoft Exchange & Office 365 hosted email or any other email service without compromising any of the major email and collaboration features like Addressbook, Calendar, Task and Contact sharing, public folders, resource sharing, Microsoft Outlook and Mobile Sync with native ActiveSync protocol.
+We are happy to announce you that you can easily migrate from Zimbra, Microsoft Exchange  or Office 365 hosted email or any other email service without compromising any of those major email and collaboration features like Addressbook, Calendar, Task and Contact sharing, public folders, resource sharing, Microsoft Outlook and Mobile Sync with native ActiveSync protocol.
 
 ## openemail is Absolutely Free
 
-As you well aware that email is by far the most widely use business application of the Internet. A single owner business to large enterprise primarily rely on email as their first line of business communication. The intention of this comprehensive free guide is to help you getting **openermail** deployed FREE if you have in house systems engineering skills. openemail is 100% free in terms of software licensing that blocks you from scaling your business.  
+As you well aware that email is by far the most widely use business application of the Internet. A single owner business to large enterprise primarily rely on email as their first line of business communication. The intention of this comprehensive free guide is to help you getting **openemail** deployed FREE if you have in house systems engineering skills. openemail is 100% free in terms of software licensing that blocks you from scaling your business.
+
+## Security is our Priority
+
+openemail thinks security is a priority. Currently openemail supports almost all DNS based email security features like SPF,DKIM, DMARC etc,
+
+It is backed by [Rspamd](https://rspamd.com/), a fast, free and open-source spam filtering system where you do not need to make any other investment on spam filtering.
+
+Integrated [Sanesecurity ClamAV signatures](https://sanesecurity.com/improve-the-detection-rate-up-to-90-of-clamav-antivirus-by-adding-sanesecurity-clamav-signatures/) improve ClamAV detection rate on Macro malware, Javascript malware, Phishing, Spam and other emailed Ransomware. This makes free your mails free from viruses and malware without any financial investment.
+
+openemail supports two-factor authentication for web UI making it more secure in web based administration
+
+## Per user spam filtering
+
+You can fine grain openemail's spam filtering backend on per email box basis by making it is the most flexible in spam managing.
+
+## Backup and Restore
+
+openemail all required tools for backup and restoring helping administrators to  have goodnight sleep and enjoy their holidays. You can sync your own FTP server or any public cloud storage like Amazon S3, Google Bucket or any other.
+
+## Domain based administration
+
+openemail supports multiple domains in a single installation with domain based administration making the delegation of administration is a breezy and easy.
 
 ### Community support
 
 - IRC @ [Freenode, #openemail](irc://irc.freenode.org:6667/openemail)
 - GitHub @ [openemail](https://github.com/openemail/openemail)
 
-## Demo
+## openemail Demo
 
 You can find a demo at [hasuna.openemail.io](https://hasuna.openemail.io), use the following credentials to login:
 
