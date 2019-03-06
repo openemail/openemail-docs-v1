@@ -77,7 +77,7 @@ sudo systemctl enable docker.service
 !!!Note
     If you are planing to use CentOS as your **openemai** docker host please follow the official [CentOS docker-ce Installation Guide](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-## Install Compose on Linux systems
+## Install Docker Compose on Linux systems
 
 On Linux, you can download the Docker Compose binary from the [Compose repository release page on GitHub](https://github.com/docker/compose/releases). Follow the instructions from the link, which involve running the curl command in your terminal to download the binaries. These step by step instructions are also included below.
 
@@ -100,7 +100,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 docker-compose --version
 ```
-## Cloning openemail  repository
+## Cloning openemail repository
 
 Clone the master branch of the repository, make sure your `umask` equals 0022.
 ```
@@ -153,6 +153,7 @@ docker-compose up -d
 ```
 
 Done!
+## access openemail UI
 
 You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` + password `openemail`.
 
