@@ -19,6 +19,13 @@ Our enterprise support  subscriptions are supporting unlimited mail domains and 
 
 For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
 
+### Community support
+
+- IRC @ [Freenode, #openemail](irc://irc.freenode.org:6667/openemail)
+- GitHub @ [openemail](https://github.com/openemail/openemail)
+
+### Hosted openemail
+
 A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
 
 ## Migrate to openemaill at no cost
@@ -41,20 +48,16 @@ openemail supports two-factor authentication for web UI making it more secure in
 
 ## Per user spam filtering
 
-You can fine grain openemail's spam filtering backend on per email box basis by making it is the most flexible in spam managing.
+You can fine grain openemail's spam filtering backend per email box basis by making it is the most flexible in spam managing.
 
 ## Backup and Restore
 
-openemail all required tools for backup and restoring helping administrators to  have goodnight sleep and enjoy their holidays. You can sync your own FTP server or any public cloud storage like Amazon S3, Google Bucket or any other.
+openemail has provided you  all required tools for backup and restoring helping administrators to  have goodnight sleep and enjoy their holidays. You can sync your backup to your own FTP server or any public cloud storage like Amazon S3, Google Bucket or any other.
 
 ## Domain based administration
 
-openemail supports multiple domains in a single installation with domain based administration making the delegation of administration is a breezy and easy.
+openemail supports multiple domains in a single installation with domain based administration making the delegation of administration is breezy and easy.
 
-### Community support
-
-- IRC @ [Freenode, #openemail](irc://irc.freenode.org:6667/openemail)
-- GitHub @ [openemail](https://github.com/openemail/openemail)
 
 ## openemail Demo
 
@@ -82,8 +85,9 @@ The integrated **openemail UI** allows administrative work on your mail server i
 - Fail2ban-like integration
 - Quarantine system
 - A lot more...
+## openemail containers
 
-openemailcomes with multiple containers linked in one bridged network. Each container represents a single application.
+openemail comes with multiple containers linked in one bridged network. Each container represents a single application.
 
 - Dovecot
 - ClamAV (optional)
@@ -101,7 +105,9 @@ openemailcomes with multiple containers linked in one bridged network. Each cont
 - Netfilter (Fail2ban-like integration by @mkuron)
 - Watchdog (basic monitoring)
 
-**Docker volumes** to keep dynamic data - take care of them!
+## Docker data volumes
+
+The following **Docker volumes** are used to keep dynamic data - take care of them!
 
 - vmail-vol-1
 - solr-vol-1
