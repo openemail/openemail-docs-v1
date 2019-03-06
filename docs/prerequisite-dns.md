@@ -9,7 +9,13 @@ Below you can find a list of **recommended DNS records**. While some are mandato
 - Another great one, but Zimbra as an example platform:
   ["Best Practices on Email Protection: SPF, DKIM and DMARC"](https://wiki.zimbra.com/wiki/Best_Practices_on_Email_Protection:_SPF,_DKIM_and_DMARC)
 - An in-depth discussion of SPF, DKIM and DMARC:
+  ["How to eliminate spam and protect y_DMARC)
+- An in-depth discussion of SPF, DKIM and DMARC:
   ["How to eliminate spam and protect your name with DMARC"](https://www.skelleton.net/2015/03/21/how-to-eliminate-spam-and-protect-your-name-with-dmarc/)
+
+### DMARC Overview
+
+For a good overview you can visit [DMARC Overview](https://dmarc.org/overview/)
 
 ## The minimal DNS configuration
 
@@ -94,11 +100,11 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtIfYQWd16SotLpDAIe+9CRda6+KmExTSM4lQsO8XsbJsECqEuUer+xrJTVA4N5tEM53MeuH36tCjsKynlKMKmNQtMpblg3fHL0Z57FUyAUoHO9GOK1lS8vOA5wbf68FQ06YHAd/Dgq21/sYrERnnXYVvH5jSA44YBfiwrvuzopl/ekMp71WJMR73TmEQ1BTf6SZA6STvCJVj8d"
 	  "pAuLekL1EYQzsGsp1kcOFYOee9c9VjfgkuZnJkAkQmz94L3YTd/08i6rZrKUSRXcx8dfitx7k12IrBsKCqlXgRIpWYWJW58gAM1Fif6gjDmugj4mAIQJ4oyWJdNDZPYpKEG+6VQQIDAQAB" )  ; ----- DKIM key dkim for openemail.io
 ```
-### Creating DKIM key in openemal UI
+### Creating DKIM key in openemail UI
 
 Do the following steps  which are marked in red color in the  configuration window screenshot of **openemail-UI** below.
 
-**1\.** Click on `Select domains with missing keys`
+**1\.** Click on `Select domains with missing keys` to select your domain.
 
 **2\.** Set `dkim` key length as `2048`
 
@@ -126,6 +132,12 @@ The corresponding DNS zone file entry that we have added for this purpose is lik
 _dmarc    IN    TXT   "v=DMARC1; p=quarantine; pct=5; rua=mailto:postmaster@openemail.io"
 
 ```
+Following are the descriptions of the parameters used in the above record.
+
+- p   - Policy for organizational domain
+- pct - Percentage of messages subjected to filtering
+- rua - Reporting URI of aggregate reports
+
 ## The advanced DNS configuration
 
 **SRV** records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.example.org."). Please refer to [RFC 2782](https://tools.ietf.org/html/rfc2782). for more details.
