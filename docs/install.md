@@ -28,6 +28,7 @@ Before you install Docker CE for the first time on a new host machine, you need 
 **Setup the repository**
 
 **1\.** Update the apt package index:
+
 ```
 sudo apt-get update
 ```
