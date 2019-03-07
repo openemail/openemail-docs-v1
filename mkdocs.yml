@@ -4,7 +4,7 @@ copyright: 'Copyright 2019 Chinthaka Deshapriya'
 repo_name: openemail/openemail
 repo_url: https://github.com/openemail/openemail-docs/
 edit_uri: edit/master/docs/
-theme: 
+theme:
   name: 'material'
   palette:
     primary: 'teal'
@@ -43,10 +43,10 @@ nav:
 - 'Prerequisites':
   - 'Prepare Your System': 'prerequisite-system.md'
   - 'DNS Setup': 'prerequisite-dns.md'
-- 'Installation & Update':
+- 'Installation and Update':
   - 'Installation': 'install.md'
   - 'Update': 'install-update.md'
-- 'First Steps (optional)':
+- '**First Steps**':
   - 'SSL': 'firststeps-ssl.md'
   - 'Rspamd Web UI': 'firststeps-rspamd_ui.md'
   - 'Reverse Proxy': 'firststeps-rp.md'
@@ -59,21 +59,21 @@ nav:
 - 'Models':
   - 'Sender and receiver model': 'model-sender_rcv.md'
   - 'ACL': 'model-acl.md'
-- 'Debugging & Troubleshooting':
+- 'Debugging and Troubleshooting':
     - 'Introduction': debug.md
     - 'Logs': 'debug-logs.md'
     - 'Attach a Container': 'debug-attach_service.md'
     - 'Reset Passwords': 'debug-reset_pw.md'
     - 'Remove Persistent Data': 'debug-rm_volumes.md'
     - 'Common Problems': 'debug-common_problems.md'
-- 'Backup & Restore':
+- 'Backup and Restore':
   - 'Helper script':
       - 'Backup': 'b_n_r_backup.md'
       - 'Restore': 'b_n_r_restore.md'
   - 'Manually':
       - 'Maildir': 'u_e-backup_restore-maildir.md'
       - 'MySQL': 'u_e-backup_restore-mysql.md'
-- 'Usage & Examples':
+- 'Usage and Examples':
   - 'openemail UI':
       - 'Configuration': 'u_e-mailcow_ui-config.md'
       - 'Blacklist / Whitelist': 'u_e-mailcow_ui-bl_wl.md'
@@ -134,7 +134,7 @@ extra:
     - type: globe
       link: https://openemail.io
     - type: github-alt
-      link: https://docs.openemail.io 
+      link: https://docs.openemail.io
 extra_css: [extra.css]
 extra_javascript: [clients.js]
 google_analytics: ['UA-135540331-1', 'docs.openemail.io']
