@@ -69,7 +69,7 @@ git status --porcelain | grep -E "UD|DU" | awk '{print $2}' | xargs rm -v
 **7\.** Check data/assets/ssl for your certificates (and dhparams.pem). If you miss them, recover your files:
 
 ```
-cp -rp /tmp/ssl_backup_mailcow/* data/assets/ssl/
+cp -rp /tmp/ssl_backup_openemail/* data/assets/ssl/
 ```
 
 ### Step 2
