@@ -82,13 +82,16 @@ sudo systemctl enable docker.service
 On Linux, you can download the Docker Compose binary from the [Compose repository release page on GitHub](https://github.com/docker/compose/releases). Follow the instructions from the link, which involve running the curl command in your terminal to download the binaries. These step by step instructions are also included below.
 
 **1.\** Run this command to download the latest version of Docker Compose:
+
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 **2\.** Apply executable permissions to the binary:
+
 ```
 sudo chmod +x /usr/local/bin/docker-compose
 ```
+
 !!! Note
     If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
 
@@ -96,6 +99,7 @@ sudo chmod +x /usr/local/bin/docker-compose
     ```
     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
     ```
+
 **3\.** Test your installation
 ```
 docker-compose --version
