@@ -151,10 +151,10 @@ Pull the images and run the composer file. The parameter `-d` will start openema
 docker-compose pull
 docker-compose up -d
 ```
-
-Done!
 ## Accessing openemail UI
 
 You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` + password `openemail`.
 
 The database will be initialized right after a connection to MySQL can be established.
+
+Done!
