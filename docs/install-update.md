@@ -19,7 +19,7 @@ Some minor conflicts will be auto-corrected (in favour for the openemail reposit
 ```
 ./update.sh --check
 ```
-**Update with merge strategy "ours" instead of "theirs" **
+**Update with merge strategy `ours` instead of `theirs`**
 
 This will merge in favor for your local changes.
 ```
