@@ -1,4 +1,4 @@
-## Let's Encrypt SSL certificates
+## **Let's Encrypt SSL certificates**
 
 Let’s Encrypt uses the ACME protocol to verify that you control a given domain name and to issue you a certificate. To get a Let’s Encrypt certificate, you’ll need to choose a piece of ACME client software to use.
 
@@ -13,7 +13,7 @@ By default, which means **0 domains** are added to openemail, it will try to obt
 
 For each domain you add, it will try to resolve `autodiscover.ADDED_MAIL_DOMAIN` and `autoconfig.ADDED_MAIL_DOMAIN` to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request.
 
-You can skip the IP verification by adding SKIP_IP_CHECK=y to openemail.conf (no quotes). Be warned that a misconfiguration will get you ratelimited by Let's Encrypt! This is primarily useful for multi-IP setups where the IP check would return the incorrect source IP. Due to using dynamic IPs for acme-openemail, source NAT is not consistent over restarts.
+You can skip the IP verification by adding `SKIP_IP_CHECK=y` to `openemail.conf` (no quotes). Be warned that a misconfiguration will get you ratelimited by Let's Encrypt! This is primarily useful for multi-IP setups where the IP check would return the incorrect source IP. Due to using dynamic IPs for `acme-openemail`, source NAT is not consistent over restarts.
 
 You could add an A record for `autodiscover` but omit `autoconfig`, the client will only validate `autodiscover` and skip `autoconfig` then.
 
@@ -21,12 +21,11 @@ For every domain you remove, the certificate will be moved and a new certificate
 
 If you want to re-run the ACME client, use
 ```
-cd /opt/openemail
 docker-compose restart acme-openemail
 ```
-### Additional domain names
+### **Additional domain names**
 
-Edit `openemail.conf` and add a parameter "ADDITIONAL_SAN" like this:
+Edit `openemail.conf` and add a parameter `ADDITIONAL_SAN` like this:
 
 Do not use quotes (`"`)!
 
@@ -43,11 +42,11 @@ docker-compose up -d
 
 ### **Skip Let's Encrypt function**
 
-Change `SKIP_LETS_ENCRYPT=y` in openemail.conf and restart the stack by running
+Change `SKIP_LETS_ENCRYPT=y` in `openemail.conf` and restart the stack by running
 ```
 docker-compose down && docker-compose up -d
 ```
-## Usin your own certificates
+## **Using your own certificates**
 
 To use your own certificates, just save the combined certificate (containing the certificate and intermediate CA/CA if any) to `data/assets/ssl/cert.pem` and the corresponding key to `data/assets/ssl/key.pem`.
 
@@ -56,13 +55,13 @@ Restart changed containers by running
 docker-compose up -d
 ```
 
-## Check your configuration
+## **Check your configuration**
 
 To find out why a validation fails, run:
 ```
 docker-compose logs acme-openemail
 ```
-To check if nginx serves the correct certificate, simply use a browser of your choice and check the displayed certificate.
+To check if `nginx` serves the correct certificate, simply use a browser of your choice and check the displayed certificate.
 
 To check the certificate served by dovecot or postfix we will use `openssl`:
 
