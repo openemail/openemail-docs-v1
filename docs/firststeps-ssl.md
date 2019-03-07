@@ -11,11 +11,11 @@ The newly introduced `acme-openemail` container is based on [ACME Tiny](https://
 
 By default, which means **0 domains** are added to openemail, it will try to obtain a certificate for ${OPENEMAIL_HOSTNAME}.
 
-For each domain you add, it will try to resolve autodiscover.ADDED_MAIL_DOMAIN and autoconfig.ADDED_MAIL_DOMAIN to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request.
+For each domain you add, it will try to resolve `autodiscover.ADDED_MAIL_DOMAIN` and `autoconfig.ADDED_MAIL_DOMAIN` to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request.
 
 You can skip the IP verification by adding SKIP_IP_CHECK=y to openemail.conf (no quotes). Be warned that a misconfiguration will get you ratelimited by Let's Encrypt! This is primarily useful for multi-IP setups where the IP check would return the incorrect source IP. Due to using dynamic IPs for acme-openemail, source NAT is not consistent over restarts.
 
-You could add an A record for "autodiscover" but omit "autoconfig", the client will only validate "autodiscover" and skip "autoconfig" then.
+You could add an A record for `autodiscover` but omit `autoconfig`, the client will only validate `autodiscover` and skip `autoconfig` then.
 
 For every domain you remove, the certificate will be moved and a new certificate will be requested. It is not possible to keep domains in a certificate, when we are not able validate the challenge for those.
 
