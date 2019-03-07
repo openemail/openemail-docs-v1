@@ -6,6 +6,8 @@ But use it with caution! If you think you made a lot of changes to the openemail
 
 Run the update script:
 ```
+sudo su -
+cd /opt/openemail
 ./update.sh
 ```
 
