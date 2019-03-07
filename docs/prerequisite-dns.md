@@ -26,7 +26,7 @@ Use the below sample records to setup your `MX` Records
 ```
 @   IN    MX  10  maila.yourdomain.tld
 @   IN    MX  20  mailb.yourdomain.tld
-
+```
 The numbers 10 and 20 are the respective MX priorities which are used in delivering the mails. The MX records with lower priority will receive mails first.  
 
 ### Sample A records for MX  IPS
@@ -35,7 +35,7 @@ Next you need to setup A records for your MX. Below is a Sample
 ```
 @   IN    A   maila     1.2.3.4
 @   IN    A   mailb     4.5.6.7
-
+```
 ### Reverse DNS for your MX IPs
 
 Make sure that the PTR record of your IP matches the FQDN of your openemal host: `${OPENEMAIL_HOSTNAME}` [^1]. This record is usually set at the provider you leased the IP (server) from.
@@ -63,7 +63,7 @@ You will get an output like Below
 ```
 4.3.2.1.in-addr.arpa    IN    PTR   maila.yourdomain.tld.
 7.6.5.4.in-addr.arpa.   IN    PTR   mailb.yourdomain.tld.
-
+```
 ## Setting up SPF Records
 
 Set up SPF to prevent spammers from sending unauthorized emails from your domain. This type of spamming is called spoofing. [Sender Policy Framework (SPF)](http://www.openspf.org/Project_Overview) is an email security method to prevent spoofing from your domain.
@@ -84,7 +84,6 @@ Please refer to [SPF Project](http://www.openspf.org) for further reading.
 
 ```
 @   IN    TXT   "v=spf1 mx -all"
-
 ```
 ### To find out your current SPF settings run:
 
@@ -133,6 +132,7 @@ sudo apt-get install opendkim opendkim-tools
 **Create the _domainkey**
 
 Now create DKIM key pair using `opendkim-genkey` command line utility. For this guide we are using domain name `openemail.io`, Change this name with your actual domain name.
+
 ```
 mkdir -p dkim-keys/openemail.io
 cd dkim-keys/openemail.io
