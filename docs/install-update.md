@@ -61,7 +61,7 @@ git commit -m "Local config at $(date)"
 git merge -Xtheirs -Xpatience
 ```
 
-**5\.** If it conflicts with files that were deleted from the mailcow repository, just run...
+**5\.** If it conflicts with files that were deleted from the openemail repository, just run...
 ```
 git status --porcelain | grep -E "UD|DU" | awk '{print $2}' | xargs rm -v
 ```
