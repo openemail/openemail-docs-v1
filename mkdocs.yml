@@ -46,7 +46,7 @@ nav:
 - 'Installation and Update':
   - 'Installation': 'install.md'
   - 'Update': 'install-update.md'
-- '**First Steps**':
+- 'First Steps':
   - 'SSL': 'firststeps-ssl.md'
   - 'Rspamd Web UI': 'firststeps-rspamd_ui.md'
   - 'Reverse Proxy': 'firststeps-rp.md'
