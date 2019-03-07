@@ -65,7 +65,6 @@ git status --porcelain | grep -E "UD|DU" | awk '{print $2}' | xargs rm -v
 ```
 
 **6\.** Repeat step 2 and 3
-```
 
 **7\.** Check data/assets/ssl for your certificates (and dhparams.pem). If you miss them, recover your files:
 
