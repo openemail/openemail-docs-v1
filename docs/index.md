@@ -1,4 +1,3 @@
-
 ## **openemail: It is Free, Open Source, and Dockerized Mail Server**
 
 At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, and email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide highly agile, secure, and enterprise ready world class email and collaboration platform that can easily replace any other equivalent commercial alternative.
