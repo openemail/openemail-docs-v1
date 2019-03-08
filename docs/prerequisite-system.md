@@ -1,3 +1,5 @@
+## **Preparing Your Docker Host**
+
 Before you run **openemail**, there are a few requirements that you should check:
 
 !!! warning
@@ -6,14 +8,14 @@ Before you run **openemail**, there are a few requirements that you should check
 !!! info
     - openemail requires [some ports](#default-ports) to be open for incoming connections, so make sure that your firewall is not blocking these port
     - Make sure that no other application is interfering with openemail's configuration, such as another mail service
-    - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics](prerequisite-dns/#the-minimal-dns-configuration) covered before you begin!
+    - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics](prerequisite-dns/#Setting-up-MX records) covered before you begin!
     - Make sure that your system has a correct date and [time setup](#date-and-time). This is crucial for stuff like two factor TOTP authentication.
 
-## Choosing a Linux Dribution for the Docker host ##
+## **Choosing a Linux Dribution for the Docker Host**
 
 During the creation of this installation guide I have used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you can make it prepare to get working in your Linux distribution of choice as your docker host. It may be Ubuntu, Debian, CentOS, or an another.
 
-## Minimum System Resources
+## **Minimum System Resources**
 
 Please make sure that your system has at least the following resources:
 
@@ -26,7 +28,7 @@ Please make sure that your system has at least the following resources:
 
 ClamAV and Solr are greedy RAM munchers. You can disable them in `openemail.conf` by settings SKIP_CLAMD=y and SKIP_SOLR=y.
 
-## Firewall & Ports
+## **Firewall and Ports**
 
 Please check if any of openemail's standard ports are open and not in use by other applications:
 
@@ -41,7 +43,7 @@ Please check if any of openemail's standard ports are open and not in use by oth
 
 If this command returns any results please remove or stop the application running on that port. You may also adjust openemail ports via the openemail.conf` configuration file.
 
-### Default Ports
+### **Default Ports**
 
 If you have a firewall in front of openemail docker host, please make sure that these ports are open for incoming connections:
 
@@ -61,10 +63,11 @@ To bind a service to an IP address, you can prepend the IP like this: `SMTP_PORT
 
 **Important**: You cannot use IP:PORT bindings in HTTP_PORT and HTTPS_PORT. Please use `HTTP_PORT=1234` and `HTTP_BIND=1.2.3.4` instead.
 
-## Setting Date and Time
+## **Setting Date and Time**
 
 You need to ensure that date and time is accurate. This is required for the operation of openemail as well and accurate system logging.
-### To check your current time run:
+
+**To check your current time run:**  
 ```
 $ timedatectl status
 ```
@@ -86,7 +89,8 @@ systemd-timesyncd.service active: no
                  RTC in local TZ: no
 ```
 The value `systemd-timesyncd.service active: no` means your system hasn't been configured get it time synced using `systemd-timesyncd`
-### To set your system time to sync with `systemd-timesyncd` run:
+
+**To set your system time to sync with `systemd-timesyncd, run:**
 
 ```
 $ sudo sudo timedatectl set-ntp on
@@ -105,7 +109,7 @@ You will see this time `systemd-timesyncd.service active: yes` as in the below o
        System clock synchronized: yes
 systemd-timesyncd.service active: yes
 
-### To check to see whether `systemd-timesyncd` is running:
+**To check to see whether `systemd-timesyncd` is running:**
 
 ```
 sudo systemctl status systemd-timesyncd
@@ -128,13 +132,13 @@ Mar 05 09:26:13 mail.openemail.io systemd-timesyncd[21020]: Synchronized to time
 Mar 06 03:18:40 mail.openemail.io systemd[1]: Stopping Network Time Synchronization...
 Mar 06 03:18:40 mail.openemail.io systemd[1]: Stopped Network Time Synchronization.
 ```
-### To start `systemd-timesyncd` run:
+**To start `systemd-timesyncd` run:**
 
 ```
 sudo systemctl start systemd-timesyncd
 ```
 
-### To see the status of `systemd-timesyncd` run:
+**To see the status of `systemd-timesyncd` run:**
 
 ```
 sudo systemctl status systemd-timesyncd
@@ -157,16 +161,15 @@ Mar 06 03:30:08 mail.openemail.io systemd[1]: Starting Network Time Synchronizat
 Mar 06 03:30:08 mail.openemail.io systemd[1]: Started Network Time Synchronization.
 Mar 06 03:30:08 mail.openemail.io systemd-timesyncd[29018]: Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com).
 ```
-## Set up static IP for Ubuntu 18.04
+**Set up static IP for Ubuntu 18.04**
 
 Ubuntu 18.04 has changed its network interface configuration subsystem with new netplan configuration. The yml syntaxes are used in network configuration.
 
-### To configure the network
+**To configure the network**
 
 ```
 sudo nano  /etc/netplan/50-cloud-init.yaml
 ```
-
 Below is an example configuration. Adjust settings as per your network environment.
 
 ```
@@ -186,12 +189,12 @@ network:
                 search: []
             set-name: eth0
 ```
-### To update your settings run:
+**To update your settings run:**
 ```
 sudo netplan apply
 ```
 
-### To check your network configuration run
+**To check your network configuration run**
 
 ```
 ip addr sh eth0
@@ -208,6 +211,6 @@ eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group d
       valid_lft forever preferred_lft forever
 ```
 
-## Setting MTU
+## **Setting MTU**
 
 If you are running openemail in OpenStack environment: Check your MTU and set it accordingly in docker-compose.yml. See **4.1** in [our installation docs](https://docs.openemail.io/install/).
