@@ -161,7 +161,7 @@ Mar 06 03:30:08 mail.openemail.io systemd[1]: Starting Network Time Synchronizat
 Mar 06 03:30:08 mail.openemail.io systemd[1]: Started Network Time Synchronization.
 Mar 06 03:30:08 mail.openemail.io systemd-timesyncd[29018]: Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com).
 ```
-##**Set up static IP**
+##**Set Up Static IP**
 
 Ubuntu 18.04 has changed its network interface configuration subsystem with new netplan configuration. The yml syntaxes are used in network configuration.
 
