@@ -127,9 +127,6 @@ nav:
   - 'Gitea': 'third_party-gitea.md'
 extra:
   logo: 'images/logo.png'
-  palette:
-    primary: 'indigo'
-    accent: 'orange'
   social:
     - type: globe
       link: https://openemail.io
