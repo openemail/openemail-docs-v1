@@ -8,7 +8,7 @@ Before you run **openemail**, there are a few requirements that you should check
 !!! info
     - openemail requires [some ports](#default-ports) to be open for incoming connections, so make sure that your firewall is not blocking these port
     - Make sure that no other application is interfering with openemail's configuration, such as another mail service
-    - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics](prerequisite-dns/#Setting-up-MX records) covered before you begin!
+    - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics](prerequisite-dns/#setting-up-mx-records) covered before you begin!
     - Make sure that your system has a correct date and [time setup](#date-and-time). This is crucial for stuff like two factor TOTP authentication.
 
 ## **Choosing a Linux Dribution for the Docker Host**
