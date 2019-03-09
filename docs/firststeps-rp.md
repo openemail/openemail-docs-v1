@@ -30,7 +30,7 @@ docker-compose up -d
 
 ### **Apache 2.4 as a Reverse Proxy**
 
-** Install Required modules:
+** Install required modules:**
 ```
 a2enmod rewrite proxy proxy_http headers ssl
 ```
