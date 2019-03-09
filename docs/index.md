@@ -92,7 +92,7 @@ The integrated **openemail UI** allows administrative work on your mail server i
 
 ## **Openemail Containers**
 
-openemail comes with multiple containers linked in one bridged network. Each container represents a single application.
+Openemail comes with multiple containers linked in one bridged network. Each container represents a single application.
 
 - Dovecot
 - ClamAV (optional)
