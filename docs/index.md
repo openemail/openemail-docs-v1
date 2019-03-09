@@ -4,7 +4,7 @@ At [Cybergate](https://cybergate.lk) our effort is to consolidate the best avail
 
 Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
 
-Inspired by the concept of [Mailcow](https://mailcow.email/) all backend application of **Openemail is running Docker Container** by making Openemail as a software that is ready deploy in your private or public cloud infrastructure by utilizing the benefit of agile and elastic cloud infrastructure of the modern day cloud computing.
+Inspired by the concept of [Mailcow](https://mailcow.email/) **all backend application of Openemail are running Docker Containers** by making Openemail as a software that is ready deploy in your private or public cloud infrastructure by utilizing the benefit of agile and elastic cloud infrastructure of the modern day cloud computing.
 
 **Openemail** has been designed to work as a highly scalable and agile software which you can use it to host from few mailboxes to millions of mailboxes which are required by services providers.  
 
