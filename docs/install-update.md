@@ -1,8 +1,8 @@
-## Automatic update
+## **Automatic Update**
 
 There is an update script in your `/opt/openemail` directory will take care of updates.
 
-But use it with caution! If you think you made a lot of changes to the openemail code, you should use the manual update guide below.
+But use it with caution! If you think you made a lot of changes to the Openemail code, you should use the manual update guide below.
 
 Run the update script:
 ```
@@ -10,12 +10,11 @@ sudo su -
 cd /opt/openemail
 ./update.sh
 ```
+- If it needs to, it will ask you how you wish to proceed.
+- Merge errors will be reported.
+- Some minor conflicts will be auto-corrected
 
-If it needs to, it will ask you how you wish to proceed.
-Merge errors will be reported.
-Some minor conflicts will be auto-corrected (in favour for the openemail repository code).
-
-### Update options
+### **Update Options**
 
 **Check for updates**
 ```
@@ -28,17 +27,17 @@ This will merge in favor for your local changes.
 ./update.sh --ours
 ```
 
-## Manual update
+## **Manual Update**
 
-### Step 1
+### **Step 1**
 
-You may want to backup your certificates, as an upgrade from an older **openemail** version may remove these files:
+You may want to backup your certificates, as an upgrade from an older **Openemail** version may remove these files:
 
 ```
 cp -rp data/assets/ssl /tmp/ssl_backup_openemail
 ```
 
-Fetch new data from GitHub, commit changes and merge remote repository:```
+Fetch new data from GitHub, commit changes and merge remote repository:
 
 **1\.** Get updates/changes
 ```
@@ -56,12 +55,12 @@ git add -A
 git commit -m "Local config at $(date)"
 ```
 
-**4\.**  Merge changes, prefer openemail repository, replace "theirs" by "ours" to change merge strategy
+**4\.**  Merge changes, prefer Openemail repository, replace "theirs" by "ours" to change merge strategy
 ```
 git merge -Xtheirs -Xpatience
 ```
 
-**5\.** If it conflicts with files that were deleted from the openemail repository, just run...
+**5\.** If it conflicts with files that were deleted from the Openemail repository, just run...
 ```
 git status --porcelain | grep -E "UD|DU" | awk '{print $2}' | xargs rm -v
 ```
@@ -74,17 +73,16 @@ git status --porcelain | grep -E "UD|DU" | awk '{print $2}' | xargs rm -v
 cp -rp /tmp/ssl_backup_openemail/* data/assets/ssl/
 ```
 
-### Step 2
+### **Step 2**
 
 **Clean-up dangling (unused) images and volumes:**
 
-It is **very important** to _not_ run these commands when your containers are deleted.
-Running `docker-compose down` - for example - will delete your containers. Your volumes are now in a dangling state! Running the commands shown below, _will_ remove your volumes and therefore your data.
+It is **very important** to _not_ run these commands when your containers are deleted. Running `docker-compose down` - for example - will delete your containers. Your volumes are now in a dangling state! Running the commands shown below, _will_ remove your volumes and therefore your data.
 
 ```
 docker rmi -f $(docker images -f "dangling=true" -q)
 docker volume rm $(docker volume ls -qf dangling=true)
 ```
-## Footnotes
+## **Footnotes**
 
 At the moment there is no release cycle regarding updates.
