@@ -4,7 +4,7 @@ DNS infrastructure of the Internet plays a major role in email security today. P
 
 This section of the document guides you in setting up **recommended DNS records**. While some are mandatory for a mail server (A, MX), others are recommended to build a good reputation score (TXT/SPF) or used for auto-configuration of mail clients (SRV).
 
-##**Setting up MX Records
+##**Setting up MX Records**
 
 **Querying for Existing MX records**
 
@@ -111,11 +111,11 @@ The diagram below will make you understand about DKIM authentication process.
 
 ![](images/dkim-process.png)
 
-### **Creating a DKIM Key and DNS Record
+###**Creating a DKIM Key and DNS Record**
 
 It is highly recommended to create a **DKIM** TXT record in your **openemal UI##  and set the corresponding TXT record in your DNS records. Please refer to [OpenDKIM](http://www.opendkim.org) for further reading.
 
-### Creating DKIM key in openemail UI
+###**Creating DKIM key in Openemail UI**
 
 Do the following steps  which are marked in red color in the  configuration window screenshot of **openemail-UI** below.
 
@@ -129,7 +129,7 @@ Do the following steps  which are marked in red color in the  configuration wind
 
 ![](images/openemail-dkim-add.png)
 
-### **Using OpenDKIM**
+###**Using OpenDKIM**
 
 The below steps can be used to create DKIM key in you Linux command line in case if you are using your own mail server like postfix. You do not need to execute commands below when you deploy **openemal**. We have listed those commands to understand how the postfix back-end has been configured for DKIM validations.
 
