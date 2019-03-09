@@ -39,7 +39,7 @@ A fully featured managed **openemaill** is also available. Please contact [Amila
 
 ### **Service Level Agreement**
 
-You can download our **[Support Level Agreement Here]sla/cybergate-openemail-sla-v1.pdf)** and review it before contacting our sales hot-line **+(94) 766 783 783** for further details
+You can download our **[Support Level Agreement Here](https://openemail.io/sla/cybergate-openemail-sla-v1.pdf)** and review it before contacting our sales hot-line **+(94) 766 783 783** for further details
 
 ## **Migrate to Openemail at No Cost**
 
