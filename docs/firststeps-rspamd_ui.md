@@ -12,4 +12,4 @@
 
 ![](images/openemail-rspamd-ui.png)
 
-Additional configuration options and documentation can be found here : https://rspamd.com/webui/
+Additional configuration options and documentation can be found here : https://rspamd.com/webui
