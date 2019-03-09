@@ -1,6 +1,8 @@
-This section explains you how to setup a reverse procxy for **openemail dockers**
+## **Setting Up Reverse Proxy**
 
-You don't need to change the Nginx site that comes with `nginx-openemail` container. openemail trusts the default gateway IP 172.22.1.1 as proxy.
+This section explains you how to setup a reverse procxy for **Openemail dockers**
+
+You don't need to change the Nginx site that comes with `nginx-openemail` container. Openemail trusts the default gateway IP 172.22.1.1 as proxy.
 
 **1\.**  Make sure you change HTTP_BIND and HTTPS_BIND in `openemail.conf` to a local address and set the ports accordingly, for example:
 ```
@@ -11,7 +13,7 @@ HTTPS_PORT=8443
 ```
 **IMPORTANT:** Do not use port 8081!
 
-Recreate affected containers by running
+**Recreate affected containers by running**
 ```
 docker-compose up -d
 ```
@@ -19,24 +21,24 @@ docker-compose up -d
     Make sure you run `generate_config.sh` before you enable any site configuration examples below. The script `generate_config.sh` copies snake-oil certificates to the correct location, so the services will not fail to start due to missing files.
 
 !!! info
-    Using the site configs below will **forward ACME requests to openemail** and let it handle certificates itself. The downside of using openemail as ACME client behind a reverse proxy is, that you will need to reload your webserver after acme-openemail changed/renewed/created the certificate. You can either reload your webserver daily or write a script to watch the file for changes. On many servers logrotate will reload the webserver daily anyway.
+    Using the site configs below will **forward ACME requests to Openemail** and let it handle certificates itself. The downside of using Openemail as ACME client behind a reverse proxy is, that you will need to reload your webserver after acme-openemail changed/renewed/created the certificate. You can either reload your webserver daily or write a script to watch the file for changes. On many servers logrotate will reload the webserver daily anyway.
 
     If you want to use a local certbot installation, you will need to change the SSL certificate parameters accordingly.  **Make sure you run a post-hook script** when you decide to use external ACME clients. You will find an example at the bottom of this page.
 
 
 **2\.** Configure your local webserver as reverse proxy:
 
-### **Apache 2.4 as a reverse proxy**
+### **Apache 2.4 as a Reverse Proxy**
 
 ** Install Required modules:
 ```
 a2enmod rewrite proxy proxy_http headers ssl
 ```
-We rewrite to HTTPS, but keep requests to autoconfig.* on a plain session.
+We rewrite to `HTTPS`,` but keep requests to `autoconfig.*`` on a plain session.
 
 Let's Encrypt will follow our rewrite, certificate requests will work fine.
 
-**Take care of highlighted lines.**
+**Take care of highlighted lines.**. You need to asjut
 
 ``` apache hl_lines="2 12 13 19 23 24 29 30"
 <VirtualHost *:80>
@@ -57,7 +59,7 @@ Let's Encrypt will follow our rewrite, certificate requests will work fine.
   RequestHeader set X-Forwarded-Proto "http"
 </VirtualHost>
 <VirtualHost *:443>
-  ServerName CHANGE_TO_openemail_HOSTNAME
+  ServerName CHANGE_TO_Openemail_HOSTNAME
   ServerAlias autodiscover.*
 
   # You should proxy to a plain HTTP session to offload SSL processing
@@ -81,7 +83,8 @@ Let's Encrypt will follow our rewrite, certificate requests will work fine.
 </VirtualHost>
 ```
 
-### Nginx
+### **Nginx as a Reverse Proxy**
+
 In our Nginx reverse proxy template, we rewrite all requests to HTTPS, while keeping autoconfig.* domains on a plain session.
 
 Let's Encrypt will follow our rewrite, certificate requests will work fine.
@@ -130,9 +133,9 @@ server {
 }
 ```
 
-### HAProxy
+### **HAProxy as a Reverse Proxy**
 
-**Important/Fixme**: This example only forwards HTTPS traffic and does not use openemails built-in ACME client.
+**Important/Fixme**: This example only forwards HTTPS traffic and does not use Openemails built-in ACME client.
 
 ```
 frontend https-in
@@ -146,14 +149,16 @@ backend openemail
   server openemail 127.0.0.1:8080 check
 ```
 
-### Optional: Post-hook script for non-openemail ACME clients
+### **Using post-hook Scripts**
+
+Optional: Post-hook script for non-openemail ACME clients
 
 Using a local certbot (or any other ACME client) requires to restart some containers, you can do this with a post-hook script.
 Make sure you change the pathes accordingly:
 ```
 #!/bin/bash
-cp /etc/letsencrypt/live/my.domain.tld/fullchain.pem /opt/openemail-dockerized/data/assets/ssl/cert.pem
-cp /etc/letsencrypt/live/my.domain.tld/privkey.pem /opt/openemail-dockerized/data/assets/ssl/key.pem
+cp /etc/letsencrypt/live/my.domain.tld/fullchain.pem /opt/openemail/data/assets/ssl/cert.pem
+cp /etc/letsencrypt/live/my.domain.tld/privkey.pem /opt/openemail/data/assets/ssl/key.pem
 # Either restart...
 #postfix_c=$(docker ps -qaf name=postfix-openemail)
 #dovecot_c=$(docker ps -qaf name=dovecot-openemail)
