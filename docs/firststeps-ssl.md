@@ -1,13 +1,13 @@
-## **Let's Encrypt SSL certificates**
+## **Let's Encrypt SSL CXertificates**
 
 Let’s Encrypt uses the ACME protocol to verify that you control a given domain name and to issue you a certificate. To get a Let’s Encrypt certificate, you’ll need to choose a piece of ACME client software to use.
 
 The ACME clients are offered by third parties. Let’s Encrypt does not control or review third party clients and cannot make any guarantees about their safety or reliability.
 
-The newly introduced `acme-openemail` container is based on [ACME Tiny](https://github.com/diafygi/acme-tiny). It will try to obtain a valid LE certificate for you.
+The newly introduced `acme-openemail` container is based on [ACME Tiny](https://github.com/diafygi/acme-tiny). It will try to obtain a valid LE certificate  automatically for you.
 
 !!! warning
-    openemai **must** be available on port 80 for the acme-client to work.
+    Openemai **must** be available on port 80 for the acme-client to work.
 
 By default, which means **0 domains** are added to openemail, it will try to obtain a certificate for ${OPENEMAIL_HOSTNAME}.
 
@@ -23,7 +23,7 @@ If you want to re-run the ACME client, use
 ```
 docker-compose restart acme-openemail
 ```
-### **Additional domain names**
+### **Additional Domain Names**
 
 Edit `openemail.conf` and add a parameter `ADDITIONAL_SAN` like this:
 
@@ -40,13 +40,13 @@ Run `docker-compose up -d` to recreate changed containers.
 docker-compose up -d
 ```
 
-### **Skip Let's Encrypt function**
+### **Skip Let's Encrypt Function**
 
 Change `SKIP_LETS_ENCRYPT=y` in `openemail.conf` and restart the stack by running
 ```
 docker-compose down && docker-compose up -d
 ```
-## **Using your own certificates**
+## **Using Your Own Certificates**
 
 To use your own certificates, just save the combined certificate (containing the certificate and intermediate CA/CA if any) to `data/assets/ssl/cert.pem` and the corresponding key to `data/assets/ssl/key.pem`.
 
@@ -55,7 +55,7 @@ Restart changed containers by running
 docker-compose up -d
 ```
 
-## **Check your configuration**
+## **Check Your Configuration**
 
 To find out why a validation fails, run:
 ```
