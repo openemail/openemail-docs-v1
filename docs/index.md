@@ -12,7 +12,6 @@ As like any other  open source software  you are  free to use Openemail at your 
 
 **Our enterprise support  subscriptions are supporting unlimited mail domains and accounts** while our subscription is an annual SLA which is confined to several levels of support channels and types together with the hardware virtual of physical server profile of the system that you will be using to deploy Openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as Openemail is 100% free.
 
-You can download our **[Support Level Agreement Here](https://docs.google.com/document/d/1Von_lHV6Qwt27Ayf4UvLN8-YaoUyh7n7ACyXxFAW5wQ/edit?usp=sharing)** and review it before contacting our sales hot-line **+(94) 766 783 783** for further details. 
 
 ## **Openemail Demo**
 
@@ -21,6 +20,27 @@ You can find a demo at [hasuna.openemail.io](https://hasuna.openemail.io), use t
 - **Administrator**: admin / openemail
 - **Domain administrator**: domainadm / openemail
 - **Mailbox**: demo@openemaill.io / openemail
+
+## **Get Support**
+
+If you think that you need our support then we are ready to help you. We have several ways of giving you support.
+
+### **Commercial Support**
+
+For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
+
+### **Community Support**
+
+- IRC @ [Freenode, #openemail](irc://irc.freenode.org:6667/openemail)
+- GitHub @ [openemail](https://github.com/openemail/openemail)
+
+### **Hosted Openemail**
+
+A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
+
+### **Service Level Agreement**
+
+You can download our **[Support Level Agreement Here]sla/cybergate-openemail-sla-v1.pdf)** and review it before contacting our sales hot-line **+(94) 766 783 783** for further details
 
 ## **Migrate to Openemail at No Cost**
 
@@ -71,7 +91,7 @@ The integrated **openemail UI** allows administrative work on your mail server i
 - Quarantine system
 - A lot more...
 
-## **openemail Containers**
+## **Openemail Containers**
 
 openemail comes with multiple containers linked in one bridged network. Each container represents a single application.
 
@@ -103,20 +123,3 @@ The following **Docker volumes** are used to keep dynamic data - take care of th
 - rspamd-vol-1
 - postfix-vol-1
 - crypt-vol-1
-
-## **Get Support**
-
-If you think that you need our support then we are ready to help you. We have several ways of giving you support.
-
-### **Commercial Support**
-
-For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) or get a support subscription at [Cybergate](https://www.cybergate.lk/solutions).
-
-### **Community Support**
-
-- IRC @ [Freenode, #openemail](irc://irc.freenode.org:6667/openemail)
-- GitHub @ [openemail](https://github.com/openemail/openemail)
-
-### **Hosted openemail**
-
-A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
