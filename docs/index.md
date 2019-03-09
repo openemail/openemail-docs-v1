@@ -10,8 +10,7 @@ Inspired by the concept of [Mailcow](https://mailcow.email/) **all the backend a
 
 As like any other  open source software  you are  free to use Openemail at your own risk while you can obtained it as a supported and enterprise ready solution which is backed by [Cybergate](https://cybergate.lk) with its world class open source support team.
 
-**Our enterprise support  subscriptions are supporting unlimited mail domains and accounts** while our subscription is an annual SLA which is confined to several levels of support channels and types together with the hardware virtual of physical server profile of the system that you will be using to deploy Openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as Openemail is 100% free.
-
+**Our enterprise support  subscriptions are supporting unlimited mail domains and accounts** while our subscription is an annual SLA which is confined to a several levels of support channels and types together with the virtual of physical hardware  server profile of the system that you will be using to deploy Openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as Openemail is 100% free.
 
 ## **Openemail Demo**
 
