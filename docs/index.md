@@ -1,6 +1,6 @@
 ## **Openemail: It is Free, Open Source, and Dockerized Mail Server**
 
-At [Cybergate](https://cybergate.lk)  our effort to consolidate the best available open source email, collaboration, and email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
+At [Cybergate](https://cybergate.lk)  our effort is to consolidate the best available open source email, collaboration, and email security solutions together with other infrastructure components like backend databases, authentication services etc. to provide highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
 Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
 
@@ -79,15 +79,16 @@ openemail comes with multiple containers linked in one bridged network. Each con
 - Memcached
 - Redis
 - MySQL
-- Unbound (as resolver)
+- Unbound
 - PHP-FPM
 - Postfix
-- ACME-Client (thanks to @bebehei)
+- ACME-Client
 - Nginx
 - Rspamd
 - SOGo
-- Netfilter (Fail2ban-like integration by @mkuron)
-- Watchdog (basic monitoring)
+- Netfilter
+- Watchdog
+- Portainer
 
 ## **Docker Data Volumes**
 
