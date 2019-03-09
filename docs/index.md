@@ -12,7 +12,7 @@ As like any other  open source software  you are  free to use Openemail at your 
 
 **Our enterprise support  subscriptions are supporting unlimited mail domains and accounts** while our subscription is an annual SLA which is confined to several levels of support channels and types together with the hardware virtual of physical server profile of the system that you will be using to deploy Openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as Openemail is 100% free.
 
-You can download our **[Support Level Agreement Here](https://docs.google.com/document/d/1Von_lHV6Qwt27Ayf4UvLN8-YaoUyh7n7ACyXxFAW5wQ/edit?usp=sharing)** and review before contacting our sales hot-line **+(94) 766 783 783**
+You can download our **[Support Level Agreement Here](https://docs.google.com/document/d/1Von_lHV6Qwt27Ayf4UvLN8-YaoUyh7n7ACyXxFAW5wQ/edit?usp=sharing)** and review it before contacting our sales hot-line **+(94) 766 783 783** for further details. 
 
 ## **Openemail Demo**
 
