@@ -2,13 +2,23 @@
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
+### **Integrated Web UI**
+
 Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
+
+### **Running on Docker Containers and Cloud Ready**
 
 Inspired by the concept of [Mailcow](https://mailcow.email/) **all the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
 
+### **Highly Scalable**
+
 **Openemail** has been designed to work as a highly scalable and agile software which you can use it to host from few mailboxes to millions of mailboxes which are required by services providers.  
 
-As like any other  open source software  you are  free to use Openemail at your own risk while you can obtained it as a supported and enterprise ready solution which is backed by [Cybergate](https://cybergate.lk) with its world class open source support team.
+### **Deploy it Yourself**
+
+As like any other  open source software  you are  free to use Openemail at your own risk. But make no worries. You can deploy it using this comprehensive deployers guide which is your heritage and our strength.
+
+### **Commercially Supported**
 
 **Our enterprise support  subscriptions are supporting unlimited mail domains and accounts** while our subscription is an annual SLA which is confined to a several levels of support channels and types together with the virtual of physical hardware  server profile of the system that you will be using to deploy Openemail. You can have both on premise and hosted solution under these subscription contracts. But all these optional and not required as Openemail is 100% free.
 
