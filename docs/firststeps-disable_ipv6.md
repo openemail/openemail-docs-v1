@@ -1,22 +1,22 @@
-This is **NOT** recommended!
+## **Disable IPV6**
+
+This is **NOT** recommended!. But in case if you want to do it, it can be done.
 
 If IPv6 MUST be disabled to fit a network, open `docker-compose.yml`, search for `enable_ipv6`...
 
-
 ```
 networks:
-  mailcow-network:
+  openemail-network:
     [...]
     enable_ipv6: true
     [...]
 ```
 
-...change it to `enable_ipv6: false`.
+ and change it to `enable_ipv6: false`.
 
-mailcow needs to be shutdown, the containers removed and the network recreated:
+Then you need to shutdown Openemail, the containers removed and the network recreated executing the following commands.
 
 ```
 docker-compose down
 docker-compose up -d
 ```
-
