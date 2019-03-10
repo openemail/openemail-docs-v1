@@ -52,12 +52,12 @@ nav:
   - 'Reverse Proxy': 'firststeps-rp.md'
   - 'SNAT': 'firststeps-snat.md'
   - 'Disable IPv6': 'firststeps-disable_ipv6.md'
-  - 'Setup a relayhost': 'firststeps-relayhost.md'
+  - 'Setup A Relayhost': 'firststeps-relayhost.md'
   - 'Logging': 'firststeps-logging.md'
-  - 'Local MTA on Docker host': 'firststeps-local_mta.md'
+  - 'Local MTA on Docker Host': 'firststeps-local_mta.md'
   - 'Sync Jobs Migration': 'firststeps-sync_jobs_migration.md'
 - 'Models':
-  - 'Sender and receiver model': 'model-sender_rcv.md'
+  - 'Sender and Receiver Model': 'model-sender_rcv.md'
   - 'ACL': 'model-acl.md'
 - 'Debugging and Troubleshooting':
     - 'Introduction': debug.md
@@ -74,28 +74,28 @@ nav:
       - 'Maildir': 'u_e-backup_restore-maildir.md'
       - 'MySQL': 'u_e-backup_restore-mysql.md'
 - 'Usage and Examples':
-  - 'openemail UI':
+  - 'Openemail UI':
       - 'Configuration': 'u_e-mailcow_ui-config.md'
       - 'Blacklist / Whitelist': 'u_e-mailcow_ui-bl_wl.md'
       - 'Spamfilter': 'u_e-mailcow_ui-spamfilter.md'
-      - 'Temporary email aliase': 'u_e-mailcow_ui-spamalias.md'
+      - 'Temporary Email Aliases': 'u_e-mailcow_ui-spamalias.md'
       - 'Tagging': 'u_e-mailcow_ui-tagging.md'
       - 'Two-Factor Authentication': 'u_e-mailcow_ui-tfa.md'
   - 'Postfix':
       - 'Anonymize Headers': 'u_e-postfix-anonym_headers.md'
       - 'Disable Sender Addresses Verification': 'u_e-postfix-disable_sender_verification.md'
-      - 'Max. message size (attachment size)': 'u_e-postfix-attachment_size.md'
-      - 'Statistics with pflogsumm': 'u_e-postfix-pflogsumm.md'
+      - 'Maximum Message Size or Attachment Size': 'u_e-postfix-attachment_size.md'
+      - 'Statistics with Pflogsumm': 'u_e-postfix-pflogsumm.md'
   - 'Unbound':
-      - 'Using an external DNS service': 'u_e-unbound-fwd.md'
+      - 'Using An External DNS Service': 'u_e-unbound-fwd.md'
   - 'Dovecot':
-      - "(Re-)Enable any and all authenticated ACL settings": 'u_e-dovecot-any_acl.md'
+      - "Enable Any and All Authenticated ACL Settings": 'u_e-dovecot-any_acl.md'
       - "Expunge a User's Mails": 'u_e-dovecot-expunge.md'
-      - 'Mail crypt': 'u_e-dovecot-mail-crypt.md'
+      - 'Mail Crypt': 'u_e-dovecot-mail-crypt.md'
       - 'More Examples with DOVEADM': 'u_e-dovecot-more.md'
-      - 'Move vmail volume': 'u_e-dovecot-vmail-volume.md'
-      - 'IMAP IDLE interval': 'u_e-dovecot-idle_interval.md'
-      - 'FTS (Solr)': 'u_e-dovecot-fts.md'
+      - 'Move Vmail Volume': 'u_e-dovecot-vmail-volume.md'
+      - 'IMAP IDLE Interval': 'u_e-dovecot-idle_interval.md'
+      - 'FTS and Solr': 'u_e-dovecot-fts.md'
   - 'Nginx': 'u_e-nginx.md'
   - 'Redis': 'u_e-redis.md'
   - 'Rspamd': 'u_e-rspamd.md'
@@ -104,7 +104,7 @@ nav:
       - 'Customize Dockerfiles': 'u_e-docker-cust_dockerfiles.md'
       - 'Docker Compose Bash Completion': 'u_e-docker-dc_bash_compl.md'
   - 'Why unbound?': 'u_e-why_unbound.md'
-  - 'Autodiscover / Autoconfig': 'u_e-autodiscover_config.md'
+  - 'Autodiscover and  Autoconfig': 'u_e-autodiscover_config.md'
   - 'Redirect HTTP to HTTPS': 'u_e-80_to_443.md'
   - 'Adjust Service Configurations': 'u_e-change_config.md'
   - 'Deinstall': 'u_e-deinstall.md'
@@ -119,7 +119,7 @@ nav:
   - 'Windows Mail': 'client/client-windows.md'
   - 'Windows Phone': 'client/client-windowsphone.md'
   - 'Manual configuration': 'client/client-manual.md'
-- 'Third party apps':
+- 'Third Party Apps':
   - 'SOGo Integrator for Thunderbird': 'third_party-thunderbird.md'
   - 'Roundcube': 'third_party-roundcube.md'
   - 'Portainer': 'third_party-portainer.md'
