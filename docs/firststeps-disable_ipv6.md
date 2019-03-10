@@ -1,5 +1,3 @@
-## **Disable IPV6**
-
 This is **NOT** recommended!. But in case if you want to do it, it can be done.
 
 If IPv6 MUST be disabled to fit a network, open `docker-compose.yml`, search for `enable_ipv6`...
