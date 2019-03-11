@@ -11,15 +11,15 @@ Before you run **openemail**, there are a few requirements that you should check
     - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics DNS setup](https://openemail.io/prerequisite-dns/#setting-up-mx-records) covered before you begin!
     - Make sure that your system has a correct date and [time setup](#date-and-time). This is crucial for stuff like two factor TOTP authentication.
 
-## **Choosing a Linux Dribution for the Docker Host**
+## **Choosing a Linux Distribution for the Docker Host**
 
-During the creation of this installation guide I have used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you can make it prepare to get working in your Linux distribution of choice as your docker host. It may be Ubuntu, Debian, CentOS, or an another.
+During the creation of this installation guide I used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you can make it prepare to get working in your Linux distribution of choice as your docker host. It may be Ubuntu, Debian, CentOS, or an another.
 
 ## **Minimum System Resources**
 
 Please make sure that your system has at least the following resources:
 
-| Resource                | openemail                           |
+| Resource                | Openemail                           |
 | ----------------------- | ----------------------------------- |
 | CPU                     | 1 GHz                               |
 | RAM                     | 2 GiB + Swap (better: 4 GiB + Swap) |
@@ -37,7 +37,7 @@ Please check if any of openemail's standard ports are open and not in use by oth
 ```
 
 !!! warning
-    There are several problems with running openemail on a firewalld/ufw enabled system. You should disable it (if possible) and move your ruleset to the DOCKER-USER chain, which is not cleared by a Docker service restart, instead. See [this blog post](https://blog.donnex.net/docker-and-iptables-filtering/) for information about how to use iptables-persistent with the DOCKER-USER chain.
+    There are several problems with running Openemail on a firewalld/ufw enabled system. You should disable it (if possible) and move your ruleset to the DOCKER-USER chain, which is not cleared by a Docker service restart, instead. See [this blog post](https://blog.donnex.net/docker-and-iptables-filtering/) for information about how to use iptables-persistent with the DOCKER-USER chain.
     As openemail runs dockerized, INPUT rules have no effect on restricting access to openemail. Use the FORWARD chain instead.
 
 
