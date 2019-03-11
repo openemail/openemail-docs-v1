@@ -7,7 +7,7 @@ The ACME clients are offered by third parties. Let’s Encrypt does not control 
 The container `acme-openemail` container is based on [ACME Tiny](https://github.com/diafygi/acme-tiny). It will try to obtain a valid LE certificate  automatically for your domains configured in Openemail.
 
 !!! warning
-    Openemai **must** be available on port 80 for the acme-client to work.
+    Openemail **must** be available on port 80 for the acme-client to work.
 
 By default, which means **0 domains** are added to Openemail, it will try to obtain a certificate for `${OPENEMAIL_HOSTNAME}`
 
