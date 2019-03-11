@@ -9,7 +9,7 @@ The container `acme-openemail` container is based on [ACME Tiny](https://github.
 !!! warning
     Openemai **must** be available on port 80 for the acme-client to work.
 
-By default, which means **0 domains** are added to Openemail, it will try to obtain a certificate for ${OPENEMAIL_HOSTNAME}.
+By default, which means **0 domains** are added to Openemail, it will try to obtain a certificate for `${OPENEMAIL_HOSTNAME}`
 
 For each domain you add, it will try to resolve `autodiscover.ADDED_MAIL_DOMAIN` and `autoconfig.ADDED_MAIL_DOMAIN` to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request.
 
@@ -28,8 +28,6 @@ docker-compose restart acme-openemail
 
 Edit `openemail.conf` and add a parameter `ADDITIONAL_SAN` like this:
 
-Do not use quotes (`"`)!
-
 ```
 ADDITIONAL_SAN=cert1.example.org,cert1.example.com,cert2.example.org,cert3.example.org
 ```
@@ -41,13 +39,13 @@ Run `docker-compose up -d` to recreate changed containers.
 docker-compose up -d
 ```
 
-### **Skip Let's Encrypt Function**
+### Skip Let's Encrypt Function
 
 Change `SKIP_LETS_ENCRYPT=y` in `openemail.conf` and restart the stack by running
 ```
 docker-compose down && docker-compose up -d
 ```
-## **Using Your Own Certificates**
+## Using Your Own Certificates
 
 To use your own certificates, just save the combined certificate (containing the certificate and intermediate CA/CA if any) to `data/assets/ssl/cert.pem` and the corresponding key to `data/assets/ssl/key.pem`.
 
@@ -56,7 +54,7 @@ Restart changed containers by running
 docker-compose up -d
 ```
 
-## **Check Your Configuration**
+## Check Your Configuration
 
 To find out why a validation fails, run:
 ```
