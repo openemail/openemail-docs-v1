@@ -101,13 +101,14 @@ Now run again run `timedatectl status`. You will observe that `systemd-timesyncd
 $ timedatectl status
 ```
 You will see this time `systemd-timesyncd.service active: yes` as in the below output
-`
+```
                       Local time: Tue 2019-03-05 09:26:24 UTC
                   Universal time: Tue 2019-03-05 09:26:24 UTC
                         RTC time: Tue 2019-03-05 09:26:25
                        Time zone: Etc/UTC (UTC, +0000)
        System clock synchronized: yes
 systemd-timesyncd.service active: yes
+```
 
 **To check to see whether `systemd-timesyncd` is running:**
 
