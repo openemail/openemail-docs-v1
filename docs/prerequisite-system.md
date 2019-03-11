@@ -1,4 +1,4 @@
-## **Preparing Your Docker Host**
+## Preparing Openemail Docker Host
 
 Before you run **openemail**, there are a few requirements that you should check:
 
@@ -11,11 +11,11 @@ Before you run **openemail**, there are a few requirements that you should check
     - A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the [basics DNS setup](https://openemail.io/prerequisite-dns/#setting-up-mx-records) covered before you begin!
     - Make sure that your system has a correct date and [time setup](#date-and-time). This is crucial for stuff like two factor TOTP authentication.
 
-## **Choosing a Linux Distribution for the Docker Host**
+## Choosing a Linux Distribution for the Docker Host
 
 During the creation of this installation guide I used [Ubuntu 18.04.2 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/). Some of the examples shown in this document may largely depend on this Linux distribution. 	But with a minor adjustment  on it you can make it prepare to get working in your Linux distribution of choice as your docker host. It may be Ubuntu, Debian, CentOS, or an another.
 
-## **Minimum System Resources**
+## Minimum System Resources
 
 Please make sure that your system has at least the following resources:
 
@@ -28,7 +28,7 @@ Please make sure that your system has at least the following resources:
 
 ClamAV and Solr are greedy RAM munchers. You can disable them in `openemail.conf` by settings SKIP_CLAMD=y and SKIP_SOLR=y.
 
-## **Firewall and Ports**
+## Firewall and Ports
 
 Please check if any of openemail's standard ports are open and not in use by other applications:
 
@@ -43,7 +43,7 @@ Please check if any of openemail's standard ports are open and not in use by oth
 
 If this command returns any results please remove or stop the application running on that port. You may also adjust openemail ports via the openemail.conf` configuration file.
 
-### **Default Ports**
+### Openemail Default Ports
 
 If you have a firewall in front of openemail docker host, please make sure that these ports are open for incoming connections:
 
@@ -63,7 +63,7 @@ To bind a service to an IP address, you can prepend the IP like this: `SMTP_PORT
 
 **Important**: You cannot use IP:PORT bindings in HTTP_PORT and HTTPS_PORT. Please use `HTTP_PORT=1234` and `HTTP_BIND=1.2.3.4` instead.
 
-## **Setting Date and Time**
+## Setting Date and Time
 
 You need to ensure that date and time is accurate. This is required for the operation of openemail as well and accurate system logging.
 
@@ -162,7 +162,7 @@ Mar 06 03:30:08 mail.openemail.io systemd[1]: Starting Network Time Synchronizat
 Mar 06 03:30:08 mail.openemail.io systemd[1]: Started Network Time Synchronization.
 Mar 06 03:30:08 mail.openemail.io systemd-timesyncd[29018]: Synchronized to time server 91.189.89.198:123 (ntp.ubuntu.com).
 ```
-##**Set Up Static IP**
+##Set Up Static IP
 
 Ubuntu 18.04 has changed its network interface configuration subsystem with new netplan configuration. The yml syntaxes are used in network configuration.
 
