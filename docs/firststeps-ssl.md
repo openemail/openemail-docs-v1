@@ -1,29 +1,30 @@
-## **Let's Encrypt SSL CXertificates**
+## Let's Encrypt SSL Certificates
 
 Let’s Encrypt uses the ACME protocol to verify that you control a given domain name and to issue you a certificate. To get a Let’s Encrypt certificate, you’ll need to choose a piece of ACME client software to use.
 
 The ACME clients are offered by third parties. Let’s Encrypt does not control or review third party clients and cannot make any guarantees about their safety or reliability.
 
-The newly introduced `acme-openemail` container is based on [ACME Tiny](https://github.com/diafygi/acme-tiny). It will try to obtain a valid LE certificate  automatically for you.
+The container `acme-openemail` container is based on [ACME Tiny](https://github.com/diafygi/acme-tiny). It will try to obtain a valid LE certificate  automatically for your domains configured in Openemail.
 
 !!! warning
     Openemai **must** be available on port 80 for the acme-client to work.
 
-By default, which means **0 domains** are added to openemail, it will try to obtain a certificate for ${OPENEMAIL_HOSTNAME}.
+By default, which means **0 domains** are added to Openemail, it will try to obtain a certificate for ${OPENEMAIL_HOSTNAME}.
 
 For each domain you add, it will try to resolve `autodiscover.ADDED_MAIL_DOMAIN` and `autoconfig.ADDED_MAIL_DOMAIN` to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request.
 
-You can skip the IP verification by adding `SKIP_IP_CHECK=y` to `openemail.conf` (no quotes). Be warned that a misconfiguration will get you ratelimited by Let's Encrypt! This is primarily useful for multi-IP setups where the IP check would return the incorrect source IP. Due to using dynamic IPs for `acme-openemail`, source NAT is not consistent over restarts.
+You can skip the IP verification by adding `SKIP_IP_CHECK=y` to `openemail.conf`. Be warned that a misconfiguration will get you ratelimited by Let's Encrypt! This is primarily useful for multi-IP setups where the IP check would return the incorrect source IP. Due to using dynamic IPs for `acme-openemail`, source NAT is not consistent over restarts.
 
-You could add an A record for `autodiscover` but omit `autoconfig`, the client will only validate `autodiscover` and skip `autoconfig` then.
+If you have added an A record for `autodiscover` but omitted `autoconfig`, the client will only validate `autodiscover` and skip `autoconfig` then.
 
 For every domain you remove, the certificate will be moved and a new certificate will be requested. It is not possible to keep domains in a certificate, when we are not able validate the challenge for those.
 
 If you want to re-run the ACME client, use
+
 ```
 docker-compose restart acme-openemail
 ```
-### **Additional Domain Names**
+### Additional Domain Names
 
 Edit `openemail.conf` and add a parameter `ADDITIONAL_SAN` like this:
 
