@@ -214,4 +214,4 @@ eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group d
 
 ## **Setting MTU**
 
-If you are running openemail in OpenStack environment: Check your MTU and set it accordingly in docker-compose.yml. See **4.1** in [our installation docs](https://docs.openemail.io/install/).
+If you are running Openemail in OpenStack environment: Check your MTU and set it accordingly in docker-compose.yml. See **4.1** in [our installation docs](https://openemail.io/install/).
