@@ -1,10 +1,10 @@
-##**DNS and Email Security**
+## DNS and Email Security
 
 DNS infrastructure of the Internet plays a major role in email security today. Proper DNS setup for your email domain requires prior to setting up **Openemail** for your domain.
 
 This section of the document guides you in setting up **recommended DNS records**. While some are mandatory for a mail server (A, MX), others are recommended to build a good reputation score (TXT/SPF) or used for auto-configuration of mail clients (SRV).
 
-##**Setting up MX Records**
+## Setting up MX Records
 
 **Querying for Existing MX records**
 
@@ -20,7 +20,7 @@ You will get an output like below.
 ```
 According to the above output the domain `openemal.io` has two `MX` records. The numbers `10` and `15` are respective `MX` priorities.
 
-###**Sample MX Records**
+### Sample MX Records
 
 Use the below sample records to setup your `MX` Records
 ```
@@ -29,14 +29,14 @@ Use the below sample records to setup your `MX` Records
 ```
 The numbers 10 and 20 are the respective MX priorities which are used in delivering the mails. The MX records with lower priority will receive mails first.  
 
-###**Sample A Records for MX IPS**
+### Sample A Records for MX IPS
 
 Next you need to setup A records for your MX. Below is a Sample
 ```
 @   IN    A   maila     1.2.3.4
 @   IN    A   mailb     4.5.6.7
 ```
-###**Reverse DNS for Your MX IPs**
+### Reverse DNS for Your MX IPs
 
 Make sure that the PTR record of your IP matches the FQDN of your openemal host: `${OPENEMAIL_HOSTNAME}` [^1]. This record is usually set at the provider you leased the IP (server) from.
 
@@ -59,12 +59,25 @@ You will get an output like Below
 ```
 231.186.183.68.in-addr.arpa domain name pointer mail.openemail.io
 ```
-### **Sample PTR Records**
+### Sample PTR Records
 ```
 4.3.2.1.in-addr.arpa    IN    PTR   maila.yourdomain.tld.
 7.6.5.4.in-addr.arpa.   IN    PTR   mailb.yourdomain.tld.
 ```
-## **Setting up SPF Records**
+## Auto Configuration of SSL certificates
+
+For each domain that you will add to Openmail, it will try to resolve `autodiscover.ADDED_MAIL_DOMAIN` and `autoconfig.ADDED_MAIL_DOMAIN` to your servers IPv4 address. If it succeeds, these names will be added as SANs to the certificate request. The container `acme-openemail` is taking care of this process using Letsencrypt Certificate Authority. To learn more about this visit [Firststeps SSL](https://openemail.io/firststeps-ssl/)
+
+###  Sample SSL Autoconfig and Autodiscover
+
+Add these records to your DNS Zone as the per the sample below.
+
+```
+@   IN    A   autodiscover     1.2.3.4
+@   IN    A   autodiscover     4.5.6.7
+```
+
+## Setting up SPF Records
 
 Haven’t we all received emails that seem to be from our bank, our credit card company or even from ourselves but they were fake emails? The way emails are structured, spammers can and often do falsify the ‘from email address’ to send these types of spoof / spam emails. This is where SPF comes into place!
 
@@ -74,7 +87,7 @@ Set up SPF to prevent spammers from sending unauthorized emails from your domain
 
 An SPF record is a TXT record that lists the mail servers that are allowed to send email from your domain. Messages sent from a server that isn't the SPF record might be marked as spam. Adding the TXT record doesn’t affect your mail flow.
 
-### **Sample SPF record**
+### Sample SPF record
 ```
 @   IN    TXT   "v=spf1 mx -all"
 ```
@@ -82,7 +95,7 @@ Using "v=spf1 mx -all" authorizes any IP that is also a MX for the sending domai
 
 Please refer to [SPF Project](http://www.openspf.org) for further reading.
 
-### **Querying for SPF Records**
+### Querying for SPF Records
 `
 **To find out your current SPF settings run:**
 
@@ -95,7 +108,7 @@ You will get an output like below.
 "v=spf1  mx -all"
 ```
 
-## **Setting UP DKIM Record**
+## Setting UP DKIM Record
 
 Use the [DomainKeys Identified Mail (DKIM) standard](http://www.dkim.org/) to help prevent email spoofing on outgoing messages.
 
@@ -111,11 +124,11 @@ The diagram below will make you understand about DKIM authentication process.
 
 ![](images/dkim-process.png)
 
-###**Creating a DKIM Key and DNS Record**
+### Creating a DKIM Key and DNS Record
 
 It is highly recommended to create a **DKIM** TXT record in your **openemal UI##  and set the corresponding TXT record in your DNS records. Please refer to [OpenDKIM](http://www.opendkim.org) for further reading.
 
-###**Creating DKIM key in Openemail UI**
+### Creating DKIM key in Openemail UI
 
 Do the following steps  which are marked in red color in the  configuration window screenshot of **openemail-UI** below.
 
@@ -129,7 +142,7 @@ Do the following steps  which are marked in red color in the  configuration wind
 
 ![](images/openemail-dkim-add.png)
 
-###**Using OpenDKIM**
+### Using OpenDKIM
 
 The below steps can be used to create DKIM key in you Linux command line in case if you are using your own mail server like postfix. You do not need to execute commands below when you deploy **openemal**. We have listed those commands to understand how the postfix back-end has been configured for DKIM validations.
 
@@ -154,7 +167,7 @@ dkim._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 	  "pAuLekL1EYQzsGsp1kcOFYOee9c9VjfgkuZnJkAkQmz94L3YTd/08i6rZrKUSRXcx8dfitx7k12IrBsKCqlXgRIpWYWJW58gAM1Fif6gjDmugj4mAIQJ4oyWJdNDZPYpKEG+6VQQIDAQAB" )  ; ----- DKIM key dkim for openemail.io
 ```
 
-##**Setup DMARC Record**
+## Setup DMARC Record
 
 DMARC defines how your domain handles suspicious emails.
 
@@ -164,7 +177,7 @@ Use DMARC to define the policy for how **openemail** handles spam emails that ap
 
 Learn more about [DMARC](https://dmarc.org/overview/).
 
-###**Sample DMARC Record**
+### Sample DMARC Record
 
 You can setup a TXT record for your domains' DMARC using the example below.
 
@@ -189,7 +202,7 @@ You will get an output like below.
 "v=DMARC1; p=quarantine; pct=5; rua=mailto:postmaster@openemail.io"
 ```
 
-##**The Advanced DNS Configuration**
+## The Advanced DNS Configuration
 
 **SRV** records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.yourdomain.tld."). Please refer to [RFC 2782](https://tools.ietf.org/html/rfc2782). for more details.
 
@@ -208,7 +221,7 @@ _caldavs._tcp       IN SRV     0 1 443   mail.yourdomain.tld.
 _caldavs._tcp       IN TXT     "path=/SOGo/dav/"
 ```
 
-##**Testing for SPF, DKIM, and DMARC**
+## Testing for SPF, DKIM, and DMARC
 
 Here are some tools you can use to verify your DNS configuration:
 
@@ -217,14 +230,14 @@ Here are some tools you can use to verify your DNS configuration:
 - [Mail-tester](https://www.mail-tester.com/) (DKIM, DMARC, SPF)
 - [DMARC Analyzer](https://www.dmarcanalyzer.com/spf/checker/) (DMARC, SPF)
 
-##**Getting Additional Statistics**
+## Getting Additional Statistics
 
 If you are interested in statistics, you can additionally register with the [Postmaster Tool](https://gmail.com/postmaster)  by Google and supply a **google-site-verification** TXT record, which will give you details about spam-classified mails by your domain. This is clearly optional. You can add a TXT records in your DNS server like the one below.
 
 ```
 @                   IN TXT     "google-site-verification=..."
 ```
-##**Additional References**
+## Additional References
 
 - A good article covering all relevant topics:
   ["3 DNS Records Every Email Marketer Must Know"](https://www.rackaid.com/blog/email-dns-records)
