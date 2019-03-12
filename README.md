@@ -1,3 +1,3 @@
-# openemail documentation
+# Openemail Deployers Guide
 
-https://docs.openemail.io
+https://openemail.io
