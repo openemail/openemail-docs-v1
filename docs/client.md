@@ -4,7 +4,7 @@ Below, you can find a number of configuration guides that explain how to configu
 <div class="client_variables_unavailable" markdown="1">
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-If you access this page by logging into your mailcow server and clicking the "Show configuration guides for email clients and smartphones" link, all of the guides will be personalized with your email address and server name.
+If you access this page by logging into your openemail server and clicking the "Show configuration guides for email clients and smartphones" link, all of the guides will be personalized with your email address and server name.
 </div>
 </div>
 
