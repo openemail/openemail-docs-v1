@@ -125,6 +125,9 @@ nav:
   - 'Portainer': 'third_party-portainer.md'
   - 'Gogs': 'third_party-gogs.md'
   - 'Gitea': 'third_party-gitea.md'
+- 'Nextcloud Integration':
+   - 'Introduction': 'nextcloud-Introduction.md'
+   - 'Nextcloud for Your Business': 'nextcloud-for-business.md'
 extra:
   logo: 'images/logo.png'
   social:
@@ -134,4 +137,4 @@ extra:
       link: https://docs.openemail.io
 extra_css: [extra.css]
 extra_javascript: [clients.js]
-google_analytics: ['UA-135540331-1', 'docs.openemail.io']
+google_analytics: ['UA-136239070-1', 'openemail.io']
