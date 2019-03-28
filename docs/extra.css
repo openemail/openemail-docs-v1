@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
-.md-nav {
-    font-size: 14px;
-    line-height: 1.4;
-}
-.md-typeset {
-    font-size: 14px;
-    line-height: 1.5;
-}
-body, input {
-    font-family: "Roboto","Roboto Mono";
-    color: black;
-}
-code {
-    display: inline-block;
-    white-space: pre-wrap;
+@page {
+    size: a4 portrait;
+    margin: 10mm 10mm 10mm 10mm;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    white-space: pre;
+    color: color;
+    @bottom-left {
+        content: '© 2018 - 2019 Chinthaka Deshapriya & Openemail';
+        font-size: 10px;
+    }
+    @top-center {
+        content: string(chapter);
+        font-size: 12px;
+    }
+    @bottom-right {
+        content: 'Page ' counter(page);
+        font-size: 10px;
+    }
 }
