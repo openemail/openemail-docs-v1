@@ -16,12 +16,12 @@ You can also use Rspamd's web UI to learn ham and / or spam or to adjust certain
 You can use a one-liner to learn mail in plain-text (uncompressed) format:
 ```
 # Ham
-for file in /my/folder/cur/*; do docker exec -i $(docker-compose ps -q rspamd-mailcow) rspamc learn_ham < $file; done
+for file in /my/folder/cur/*; do docker exec -i $(docker-compose ps -q rspamd-openemail) rspamc learn_ham < $file; done
 # Spam
-for file in /my/folder/.Junk/cur/*; do docker exec -i $(docker-compose ps -q rspamd-mailcow) rspamc learn_spam < $file; done
+for file in /my/folder/.Junk/cur/*; do docker exec -i $(docker-compose ps -q rspamd-openemail) rspamc learn_spam < $file; done
 ```
 
-Consider attaching a local folder as new volume to `rspamd-mailcow` in `docker-compose.yml` and learn given files inside the container. This can be used as workaround to parse compressed data with zcat. Example:
+Consider attaching a local folder as new volume to `rspamd-openemail` in `docker-compose.yml` and learn given files inside the container. This can be used as workaround to parse compressed data with zcat. Example:
 
 ```
 for file in /data/old_mail/.Junk/cur/*; do rspamc learn_spam < zcat $file; done
@@ -30,8 +30,8 @@ for file in /data/old_mail/.Junk/cur/*; do rspamc learn_spam < zcat $file; done
 ## CLI tools
 
 ```
-docker-compose exec rspamd-mailcow rspamc --help
-docker-compose exec rspamd-mailcow rspamadm --help
+docker-compose exec rspamd-openemail rspamc --help
+docker-compose exec rspamd-openemail rspamadm --help
 ```
 
 ## Disable Greylisting
