@@ -1,5 +1,5 @@
-mailcow supports a variety of email clients, both on desktop computers and on smartphones.
-Below, you can find a number of configuration guides that explain how to configure your mailcow account.
+openemail supports a variety of email clients, both on desktop computers and on smartphones.
+Below, you can find a number of configuration guides that explain how to configure your openemail account.
 
 <div class="client_variables_unavailable" markdown="1">
 <div class="admonition tip">
@@ -11,7 +11,7 @@ If you access this page by logging into your mailcow server and clicking the "Sh
 <div class="client_variables_available" markdown="1">
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-Since you accessed this page after logging into your mailcow server, all of the guides have been personalized with your email address and server name.
+Since you accessed this page after logging into your openemail server, all of the guides have been personalized with your email address and server name.
 </div>
 </div>
 
