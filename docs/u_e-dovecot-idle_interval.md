@@ -21,13 +21,13 @@ I choose 29 minutes because this is the maximum value allowed by the [correspond
 ### Reload dovecot
 Now reload dovecot:
 ```
-docker-compose exec dovecot-mailcow dovecot reload
+docker-compose exec dovecot-openemail dovecot reload
 ```
 
 !!! info
 	You can check the value of this setting with 
 	```
-	docker-compose exec dovecot-mailcow dovecot -a | grep "imap_idle_notify_interval"
+	docker-compose exec dovecot-openemail dovecot -a | grep "imap_idle_notify_interval"
 	```
 	If you didn't change it, it should be at 2m. If you did change it, you should see your new value.
 
