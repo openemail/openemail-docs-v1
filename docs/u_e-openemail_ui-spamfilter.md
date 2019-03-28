@@ -1,4 +1,4 @@
-A mailbox user may adjust the spam filter and black- / whitelist settings for his mailbox individually by navigating to the **Spam filter** tab in the users mailcow UI.
+A mailbox user may adjust the spam filter and black- / whitelist settings for his mailbox individually by navigating to the **Spam filter** tab in the users openemail UI.
 
 ![Where to adjust the users spam, black- and whitelist settings](images/mailcow-spamfilter.png)
 
