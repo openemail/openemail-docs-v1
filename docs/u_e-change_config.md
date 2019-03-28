@@ -64,5 +64,5 @@ data/conf
 
 Just change the according configuration file on the host and restart the related service:
 ```
-docker-compose restart service-mailcow
+docker-compose restart service-openemail
 ```
