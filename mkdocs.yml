@@ -37,7 +37,7 @@ markdown_extensions:
   - pymdownx.extra
   - footnotes
 nav:
-- 'Product Overview and Support': 'index.md'
+- 'Openemail Overview and Support': 'index.md'
 - 'Prerequisites':
   - 'Prepare Your System': 'prerequisite-system.md'
   - 'DNS Setup': 'prerequisite-dns.md'
