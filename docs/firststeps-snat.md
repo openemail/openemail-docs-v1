@@ -1,6 +1,6 @@
 ## **SNAT**
 
-SNAT is used to change the source address of the packets sent by **Openemail**.
+SNAT is used to change the source address of the packets sent by **openemail**.
 It can be used to change the outgoing IP on systems with multiple IP addresses.
 
 Open `openemail.conf`, set either or both of the following parameters:
@@ -18,6 +18,6 @@ SNAT6_TO_SOURCE=dead:beef
 ```
 docker-compose up -d
 ```
-The values are read by netfilter-openemail. The container `netfilter-op enemail` will make sure, the post-routing rules are on position 1 in the netfilter table. It does automatically delete and re-create them if they are found on another position than 1.
+The values are read by netfilter-openemail. The container `netfilter-openemail` will make sure, the post-routing rules are on position 1 in the netfilter table. It does automatically delete and re-create them if they are found on another position than 1.
 
 Check the output of `docker-compose logs --tail=200 netfilter-openemail to ensure the SNAT settings have been applied.
