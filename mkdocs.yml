@@ -87,19 +87,19 @@ nav:
       - 'Maximum Message Size or Attachment Size': 'u_e-postfix-attachment_size.md'
       - 'Statistics with Pflogsumm': 'u_e-postfix-pflogsumm.md'
   - 'Unbound':
-      - 'Using An External DNS Service': 'u_e-unbound-fwd.md'openemail
+      - 'Using An External DNS Service': 'u_e-unbound-fwd.md'
   - 'Dovecot':
       - "Enable Any and All Authenticated ACL Settings": 'u_e-dovecot-any_acl.md'
       - "Expunge a User's Mails": 'u_e-dovecot-expunge.md'
-      - 'Mail Crypt': 'u_e-dovecot-mail-crypt.md'openemail
-      - 'More Examples with DOVEADM': 'u_e-dovecot-more.md'openemail
-      - 'Move Vmail Volume': 'u_e-dovecot-vmail-volume.md'openemail
+      - 'Mail Crypt': 'u_e-dovecot-mail-crypt.md'
+      - 'More Examples with DOVEADM': 'u_e-dovecot-more.md'
+      - 'Move Vmail Volume': 'u_e-dovecot-vmail-volume.md'
       - 'IMAP IDLE Interval': 'u_e-dovecot-idle_interval.md'
       - 'FTS and Solr': 'u_e-dovecot-fts.md'
   - 'Nginx': 'u_e-nginx.md'
-  - 'Redis': 'u_e-redis.md'openemail
+  - 'Redis': 'u_e-redis.md'
   - 'Rspamd': 'u_e-rspamd.md'
-  - 'SOGo': 'u_e-sogo.md'openemail
+  - 'SOGo': 'u_e-sogo.md'
   - 'Docker':
       - 'Customize Dockerfiles': 'u_e-docker-cust_dockerfiles.md'
       - 'Docker Compose Bash Completion': 'u_e-docker-dc_bash_compl.md'
@@ -123,7 +123,7 @@ nav:
 extra:
   logo: 'images/logo.png'
   social:
-    - type: globeclient/client-thunderbird.md'
+    - type: 'globeclient/client-thunderbird.md'
   - 'Windows Mail': 'client/client-windows.md'
   - 'Windows Phone': 'client/client-windowsphone.md'
   - 'Manual configuration': 'client/client-manual.md'
