@@ -1,4 +1,4 @@
-With Gogs' ability to authenticate over SMTP it is trivial to integrate it with mailcow. Few changes are needed:
+With Gogs' ability to authenticate over SMTP it is trivial to integrate it with openemail. Few changes are needed:
 
 1\. Open `docker-compose.override.yml` and add Gogs:
 
@@ -6,12 +6,12 @@ With Gogs' ability to authenticate over SMTP it is trivial to integrate it with 
 version: '2.1'
 services:
 
-    gogs-mailcow:
+    gogs-openemail:
       image: gogs/gogs
       volumes:
         - ./data/gogs:/data
       networks:
-        mailcow-network:
+        openemail-network:
           aliases:
             - gogs
       ports:
@@ -25,15 +25,15 @@ location /gogs/ {
 }
 ```
 
-3\. Open `mailcow.conf` and define the binding you want Gogs to use for SSH. Example:
+3\. Open `openemail.conf` and define the binding you want Gogs to use for SSH. Example:
 
 ```
 GOGS_SSH_PORT=127.0.0.1:4000
 ```
 
-5\. Run `docker-compose up -d` to bring up the Gogs container and run `docker-compose restart nginx-mailcow` afterwards.
+5\. Run `docker-compose up -d` to bring up the Gogs container and run `docker-compose restart nginx-openemail` afterwards.
 
-6\. Open `http://${MAILCOW_HOSTNAME}/gogs/`, for example `http://mx.example.org/gogs/`. For database details set `mysql` as database host. Use the value of DBNAME found in mailcow.conf as database name, DBUSER as database user and DBPASS as database password.
+6\. Open `http://${OPENEMAIL_HOSTNAME}/gogs/`, for example `http://mx.example.org/gogs/`. For database details set `mysql` as database host. Use the value of DBNAME found in openemail.conf as database name, DBUSER as database user and DBPASS as database password.
 
 7\. Once the installation is complete, login as admin and set "settings" -> "authorization" -> "enable SMTP". SMTP Host should be `postfix` with port `587`, set `Skip TLS Verify` as we are using an unlisted SAN ("postfix" is most likely not part of your certificate).
 
@@ -42,11 +42,11 @@ GOGS_SSH_PORT=127.0.0.1:4000
 ```
 [server]
 SSH_LISTEN_PORT = 22
-# For GOGS_SSH_PORT=127.0.0.1:4000 in mailcow.conf, set:
+# For GOGS_SSH_PORT=127.0.0.1:4000 in openemail.conf, set:
 SSH_DOMAIN = 127.0.0.1
 SSH_PORT = 4000
-# For MAILCOW_HOSTNAME=mx.example.org in mailcow.conf (and default ports for HTTPS), set:
+# For OPENEMAIL_HOSTNAME=mx.example.org in openemail.conf (and default ports for HTTPS), set:
 ROOT_URL = https://mx.example.org/gogs/
 ```
 
-9\. Restart Gogs with `docker-compose restart gogs-mailcow`. Your users should be able to login with mailcow managed accounts.
+9\. Restart Gogs with `docker-compose restart gogs-openemail`. Your users should be able to login with openemail managed accounts.
