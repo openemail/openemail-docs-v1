@@ -10,6 +10,10 @@ Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) pro
 
 Inspired by the concept of [Mailcow](https://mailcow.email/) **all the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
 
+Following figure depicts how Openemail docker containers are interconnected internally and how they are being accessed externally.
+
+![zoomify](images/openemail-architechture-overview.jpg)
+
 ### **Highly Scalable**
 
 **Openemail** has been designed to work as a highly scalable and agile software which you can use it to host from few mailboxes to millions of mailboxes which are required by services providers.  
