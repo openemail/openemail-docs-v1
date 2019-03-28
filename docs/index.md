@@ -6,6 +6,10 @@ At [Cybergate](https://cybergate.lk) our effort is to consolidate the best avail
 
 We have borrowed some excellent ideas from existing dockerized  email projects, specially from "Mailcow" and "MailU". But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features continues,
 
+### Email and collaboration with ActiveSync
+
+You can sync and share email, tasks, contacts, Calendars, GAL, and resource booking between, Microsoft Outlook Android, iPhone, BlackBerry 10 or any other ActiveSync capable device or application limitlessly.
+
 ### Integrated Web UI
 
 Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
@@ -32,11 +36,11 @@ As like any other  open source software  you are  free to use Openemail at your 
 
 ## Openemail Demo
 
-You can find a demo at [hasuna.openemail.io](https://hasuna.openemail.io), use the following credentials to login:
+You can find a demo at [hasuna.cybergatelab.com](https://hasuna.cybergatelab.com), use the following credentials to login:
 
 - **Administrator**: admin / openemail
-- **Domain administrator**: domainadm / openemail
-- **Mailbox**: demo@openemaill.io / openemail
+- **Domain administrator**: admincybergatelab / openemail
+- **Mailbox**: demo@cybergatelab.com / openemail
 
 ## Get Support
 
