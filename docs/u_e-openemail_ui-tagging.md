@@ -1,4 +1,4 @@
-Mailbox users can tag their mail address like in `me+facebook@example.org`. They can control the tag handling in the users **mailcow UI** panel.
+Mailbox users can tag their mail address like in `me+facebook@example.org`. They can control the tag handling in the users **openemail UI** panel.
 
 ![mailcow mail tagging settings](images/mailcow-tagging.png)
 
