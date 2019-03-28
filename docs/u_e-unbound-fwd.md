@@ -14,6 +14,6 @@ Please do not use a public resolver like we did in the example above. Many - if 
 Restart Unbound after changing its config file:
 
 ```
-docker-compose restart unbound-mailcow
+docker-compose restart unbound-openemail
 ```
 
