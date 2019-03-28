@@ -1,4 +1,4 @@
-To add or edit an entry to your **domain wide** filter table, login to your *mailcow UI* as (domain) administrator.
+To add or edit an entry to your **domain wide** filter table, login to your *openemail UI* as (domain) administrator.
 
 ![Black- and Whitelist configuration](images/mailcow-bl_wl.png)
 
