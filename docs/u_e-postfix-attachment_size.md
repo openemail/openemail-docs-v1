@@ -3,5 +3,5 @@ Open `data/conf/postfix/main.cf` and set the `message_size_limit` accordingly in
 Restart Postfix:
 
 ```
-docker-compose restart postfix-mailcow
+docker-compose restart postfix-openemail
 ```
