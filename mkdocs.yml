@@ -32,8 +32,6 @@ markdown_extensions:
       permalink: true
   - admonition
   - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: tru_e-postfix-anonym_headers/ue
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.extra
