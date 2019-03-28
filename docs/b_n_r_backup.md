@@ -1,6 +1,6 @@
 ### Backup
 
-You can use the provided script `helper-scripts/backup_and_restore.sh` to backup mailcow automatically.
+You can use the provided script `helper-scripts/backup_and_restore.sh` to backup openemail automatically.
 
 Please do not copy this script to another location.
 
@@ -19,11 +19,11 @@ You can also use "all" as second parameter to backup all components.
 
 ```
 
-The script will ask you for a backup location. Inside of this location it will create folders in the format "mailcow_DATE".
+The script will ask you for a backup location. Inside of this location it will create folders in the format "openemail_DATE".
 You should not rename those folders to not break the restore process.
 
-To run a backup unattended, define MAILCOW_BACKUP_LOCATION as environment variable before starting the script:
+To run a backup unattended, define OPENEMAIL_BACKUP_LOCATION as environment variable before starting the script:
 
 ```
-MAILCOW_BACKUP_LOCATION=/opt/backup /opt/mailcow-dockerized/helper-scripts/backup_and_restore.sh backup all
+OPENEMAIL_BACKUP_LOCATION=/opt/backup /opt/openemail-dockerized/helper-scripts/backup_and_restore.sh backup all
 ```
