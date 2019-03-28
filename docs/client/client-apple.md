@@ -6,7 +6,7 @@ Email, contacts and calendars can be configured automatically on Apple devices b
 
 This method configures IMAP, CardDAV and CalDAV.
 
-1. Download and open <span class="client_variables_unavailable">the file from <i>https://${MAILCOW_HOSTNAME}/mobileconfig.php</i></span><span class="client_variables_available"><a class="client_var_link" href="mobileconfig.php">mailcow.mobileconfig</a></span>.
+1. Download and open <span class="client_variables_unavailable">the file from <i>https://${OPENEMAIL_HOSTNAME}/mobileconfig.php</i></span><span class="client_variables_available"><a class="client_var_link" href="mobileconfig.php">openemail.mobileconfig</a></span>.
 2. Enter the unlock code (iPhone) or computer password (Mac).
 3. Enter your email password three times when prompted.
 
@@ -14,7 +14,7 @@ This method configures IMAP, CardDAV and CalDAV.
 
 This method configures IMAP only.
 
-1. Download and open <span class="client_variables_unavailable">the file from <i>https://${MAILCOW_HOSTNAME}/mobileconfig.php?only_email</i></span><span class="client_variables_available"><a class="client_var_link" href="mobileconfig.php?only_email">mailcow.mobileconfig</a></span>.
+1. Download and open <span class="client_variables_unavailable">the file from <i>https://${OPENEMAIL_HOSTNAME}/mobileconfig.php?only_email</i></span><span class="client_variables_available"><a class="client_var_link" href="mobileconfig.php?only_email">openemail.mobileconfig</a></span>.
 2. Enter the unlock code (iPhone) or computer password (Mac).
 3. Enter your email password when prompted.
 
