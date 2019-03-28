@@ -1,4 +1,4 @@
-To remove mailcow: dockerized with all it's volumes, images and containers do:
+To remove openemail: dockerized with all it's volumes, images and containers do:
 
 ```
 docker-compose down -v --rmi all --remove-orphans
