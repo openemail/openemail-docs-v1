@@ -32,7 +32,7 @@ Please read our guide on [DNS configuration](prerequisite-dns.md).
 - `AttributeError: 'NoneType' object has no attribute 'keys'`.
 - `ERROR: In file './docker-compose.yml' service 'version' doesn't have any configuration options`.
 
-When you encounter one or similar messages while trying to run mailcow: dockerized please check if you have the **latest** version of **Docker** and **docker-compose**
+When you encounter one or similar messages while trying to run openemail: dockerized please check if you have the **latest** version of **Docker** and **docker-compose**
 
 ## Container XY is unhealthy
 
@@ -48,10 +48,10 @@ It might also be wrongly linked file (i.e. SSL certificate) that prevents a cruc
 If you get an error message like:
 
 ```
-ERROR: for postfix-mailcow  Cannot start service postfix-mailcow: driver failed programming external     connectivity on endpoint mailcowdockerized_postfix-mailcow_1: Error starting userland proxy: listen tcp 0.0.0.0:25: bind: address already in use
+ERROR: for postfix-openemail  Cannot start service postfix-openemail: driver failed programming external     connectivity on endpoint openemaildockerized_postfix-openemail_1: Error starting userland proxy: listen tcp 0.0.0.0:25: bind: address already in use
 ```
 
-while trying to start / install mailcow: dockerized, make sure you've followed our section on the [prerequisites](prerequisite-system/#firewall-ports).
+while trying to start / install openemail: dockerized, make sure you've followed our section on the [prerequisites](prerequisite-system/#firewall-ports).
 
 ## XYZ can't connect to ...
 
@@ -68,7 +68,7 @@ To enable telnet on a Windows after Vista please check this [guide](https://soci
 dism /online /Enable-Feature /FeatureName:TelnetClient
 ```
 
-## Inotify instance limit for user 5000 (UID vmail) exceeded ([see #453](https://github.com/mailcow/mailcow-dockerized/issues/453#issuecomment-314711232))
+## Inotify instance limit for user 5000 (UID vmail) exceeded ([see #453](https://github.com/openemail/openemail-dockerized/issues/453#issuecomment-314711232))
 
 Docker containers use the Docker hosts inotify limits. Setting them on your Docker host will pass them to the container.
 
