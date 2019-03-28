@@ -115,7 +115,7 @@ nav:
   - 'eM Client': 'client/client-emclient.md'
   - 'KDE Kontact': 'client/client-kontact.md'
   - 'Microsoft Outlook': 'client/client-outlook.md'
-  - 'Mozilla Thunderbird': 'client-thunderbird.md'
+  - 'Mozilla Thunderbird': 'client/client-thunderbird.md'
   - 'Windows Mail': 'client/client-windows.md'
   - 'Windows Phone': 'client/client-windowsphone.md'
   - 'Manual configuration': 'client/client-manual.md'
