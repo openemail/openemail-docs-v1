@@ -138,7 +138,6 @@ plugins:
       verbose: true
       media_type: print
       enabled_if_env: ENABLE_PDF_EXPORT
-extra_css: [pdf-extra.css]
 extra_css: [extra.css]
 extra_javascript: [clients.js]
 google_analytics: ['UA-136239070-1', 'openemail.io']
