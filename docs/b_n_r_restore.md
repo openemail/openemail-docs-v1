@@ -11,5 +11,5 @@ To run a restore, write "restore" as first parameter.
 
 ```
 
-The script will ask you for a backup location containing the mailcow_DATE folders.
+The script will ask you for a backup location containing the openemail_DATE folders.
 
