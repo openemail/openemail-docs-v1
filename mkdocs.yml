@@ -60,7 +60,7 @@ nav:
   - 'Sender and Receiver Model': 'model-sender_rcv.md'
   - 'ACL': 'model-acl.md'
 - 'Debugging and Troubleshooting':
-    - 'Introduction': debug.md
+    - 'Introduction': 'debug.md'
     - 'Logs': 'debug-logs.md'
     - 'Attach a Container': 'debug-attach_service.md'
     - 'Reset Passwords': 'debug-reset_pw.md'
@@ -115,15 +115,7 @@ nav:
   - 'eM Client': 'client/client-emclient.md'
   - 'KDE Kontact': 'client/client-kontact.md'
   - 'Microsoft Outlook': 'client/client-outlook.md'
-  - 'Mozilla Thunderbird': 'gogs.md'
-  - 'Gitea': 'third_party-gitea.md'
-- 'Nextcloud Integration':
-   - 'Introduction': 'nextcloud-Introduction.md'
-   - 'Nextcloud for Your Business': 'nextcloud-for-business.md'
-extra:
-  logo: 'images/logo.png'
-  social:
-    - type: 'globeclient/client-thunderbird.md'
+  - 'Mozilla Thunderbird': 'client-thunderbird.md'
   - 'Windows Mail': 'client/client-windows.md'
   - 'Windows Phone': 'client/client-windowsphone.md'
   - 'Manual configuration': 'client/client-manual.md'
