@@ -1,6 +1,6 @@
 ## Openemail: It is Free, Open Source, and Dockerized Mail Server
 
-**It is your mail server".  It is free and limitless. Use it for your business. Earn money selling support.  Training institute who are teaching docker are encouraged to use this as a comprehensive use case lab.  
+**It is your mail server**.  It is free and limitless. Use it for your business. Earn money selling support.  Training institute who are teaching docker are encouraged to use this as a comprehensive use case lab.  
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
