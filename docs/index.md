@@ -1,25 +1,25 @@
-## Openemail: It is Free, Open Source, and Dockerized Mail Server
-                                                                  \
-**It is your mail server**.  It is free and limitless. Use it for your business. Earn money selling support.  Training institute who are teaching docker are encouraged to use this as a comprehensive use case lab.  
-                                                                                                                                                          \
+## Openemail: It is Free, Open Source, and Dockerized Mail Server  
+
+**It is your mail server**.  It is free and limitless. Use it for your business. Earn money selling support.  Training institute who are teaching docker are highly encouraged to use this as a comprehensive production use case lab.
+
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
-                                                                                                                                                    \
-We have borrowed some excellent ideas from existing dockerized  email projects, specially from "Mailcow" and "MailU". But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features continues,
-                                                                                            \
+
+We have borrowed some excellent ideas from existing dockerized  email projects, specially from "Mailcow" and "MailU". But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
+
 ### Email and collaboration with ActiveSync
-                                                 \
-You can sync and share email, tasks, contacts, Calendars, GAL, and resource booking between, Microsoft Outlook Android, iPhone, BlackBerry 10 or any other ActiveSync capable device or application limitlessly.
-                                                                            \
+
+You can sync and share email, tasks, contacts, Calendars, GAL, and resource booking between, Microsoft Outlook Android, iPhone, BlackBerry 10 or any other ActiveSync capable device or application.
+
 ### Integrated Web UI
-                                                                            \
+
 Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
-                                                                              \
+
 ### Running on Docker Containers and Cloud Ready
-                                                            \
+
 Inspired by the concept of [Mailcow](https://mailcow.email/) **all the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
-        \
+
 Following figure depicts how Openemail docker containers are interconnected internally and how they are being accessed externally.
-  \
+
 ![zoomify](images/openemail-architechture-overview.jpg)
 
 ### Highly Scalable
