@@ -1,6 +1,6 @@
 ## Custom sites
 
-To create persistent (over updates) sites hosted by mailcow: dockerized, a new site configuration must be placed inside `data/conf/nginx/`:
+To create persistent (over updates) sites hosted by openemail: dockerized, a new site configuration must be placed inside `data/conf/nginx/`:
 
 ```
 nano data/conf/nginx/my_custom_site.conf
