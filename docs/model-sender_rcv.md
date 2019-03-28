@@ -37,5 +37,5 @@ You can choose between mailbox users or completely disable the sender check for 
 
 Mailbox users can, obviously, select their own mailbox address, as well as all alias addresses and aliases that exist through alias domains.
 
-If you want to select another _existing_ mailbox user as your "mail from" address, this user has to delegate you access through SOGo (see SOGo documentation). Moreover a mailcow (domain) administrator
+If you want to select another _existing_ mailbox user as your "mail from" address, this user has to delegate you access through SOGo (see SOGo documentation). Moreover a openemail (domain) administrator
 needs to grant you access as described above.
