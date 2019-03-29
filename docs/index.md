@@ -4,15 +4,15 @@
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
-We have borrowed some excellent ideas from existing dockerized  email projects, specially from **Mailcow** and **MailU** But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
+We have borrowed some excellent ideas from existing dockerized  email projects, specially from **Mailcow** and **MailU** But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on **MyVd**, Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
 
-### Email and collaboration with ActiveSync
+### Email and Collaboration with ActiveSync
 
 You can sync and share email, tasks, contacts, Calendars, GAL, and resource booking between, Microsoft Outlook Android, iPhone, BlackBerry 10 or any other ActiveSync capable device or application.
 
 ### Integrated Web UI
 
-Our administration **Web UI**  started as  fork of [Mailcow](https://mailcow.email/) project and extending it with as we are adding new features. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing. The built-in Ldap Directory is based on OpenLDAP and web based UI from [FusionDirectory](https://www.fusiondirectory.org/)
+Our administration **Web UI**  started as  fork of [Mailcow](https://mailcow.email/) project and extending it as we are adding new features. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing. The built-in Ldap Directory is based on OpenLDAP and web based UI from [FusionDirectory](https://www.fusiondirectory.org/)
 
 ### Running on Docker Containers and Cloud Ready
 
@@ -28,7 +28,7 @@ Following figure depicts how Openemail docker containers are interconnected inte
 
 ### Deploy it Yourself
 
-As like any other  open source software  you are  free to use Openemail at your own risk. But make no worries. You can deploy it using this comprehensive deployers guide which is your heritage from us and our strength. Honestly speaking you will take less than **five** minutes to installer once your docker host is readu
+As like any other  open source software  you are  free to use Openemail at your own risk. But make no worries. You can deploy it using this comprehensive deployers guide which is your heritage from us and our strength. Honestly speaking you will take less than **five** minutes to install Openemail once your docker host is ready.
 
 ### Commercially Supported
 
@@ -57,7 +57,7 @@ For commercial support contact [sales@cybergate.lk](mailto:sales@cybergate.lk) o
 
 ### Hosted Openemail
 
-A fully featured managed **openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
+A fully featured managed **Openemaill** is also available. Please contact [Amila](https://www.linkedin.com/in/amila-m-kothalawala-87357152/) on +(94)77 316 545 for more details
 
 ### Service Level Agreement
 
@@ -133,9 +133,9 @@ Openemail comes with multiple containers linked in one bridged network. Each con
 - Watchdog
 - Portainer
 - Openldap
-- openldap-backup
+- Openldap-backup
 - Openvd
-- auto-backup
+- Auto-backup
 
 ## Docker Data Volumes
 
