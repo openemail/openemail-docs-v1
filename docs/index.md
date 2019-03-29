@@ -4,7 +4,7 @@
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
-We have borrowed some excellent ideas from existing dockerized  email projects, specially from **Mailcow** and **MailU"** But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
+We have borrowed some excellent ideas from existing dockerized  email projects, specially from **Mailcow** and **MailU** But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
 
 ### Email and collaboration with ActiveSync
 
