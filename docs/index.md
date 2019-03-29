@@ -1,10 +1,10 @@
 ## Openemail: It is Free, Open Source, and Dockerized Mail Server  
 
-**It is your mail server**.  It is free and limitless. Use it for your business. Earn money selling support.  Training institute who are teaching docker are highly encouraged to use this as a comprehensive production use case lab.
+**It is your mail server**. It is Open Source. It is production ready. It is secure. It is fast. Zero initial configurations. It can be deployed in few minutes. It can be updated in few minutes. It is license free and limitless. Use it for your business. Earn money by selling support. Use it as a comprehensive production use case lab in your Docker training at least. 
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
-We have borrowed some excellent ideas from existing dockerized  email projects, specially from "Mailcow" and "MailU". But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
+We have borrowed some excellent ideas from existing dockerized  email projects, specially from **Mailcow** and **MailU"** But we are significantly different from them specially in the areas of comprehensive deployment guide, LDAP Directory, Virtual Directory based on "myvd", Microsoft AD integration, Resource Booking ,and Global Address support via SOGo groupware and we adding new features contentiously.
 
 ### Email and collaboration with ActiveSync
 
@@ -16,7 +16,7 @@ Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) pro
 
 ### Running on Docker Containers and Cloud Ready
 
-Inspired by the concept of [Mailcow](https://mailcow.email/) **all the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
+All the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
 
 Following figure depicts how Openemail docker containers are interconnected internally and how they are being accessed externally.
 
