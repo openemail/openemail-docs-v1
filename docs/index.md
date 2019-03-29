@@ -1,6 +1,6 @@
 ## Openemail: It is Free, Open Source, and Dockerized Mail Server  
 
-**It is your mail server**. It is Open Source. It is production ready. It is secure. It is fast. Zero initial configurations. It can be deployed in few minutes. It can be updated in few minutes. It is license free and limitless. Use it for your business. Earn money by selling support. Use it as a comprehensive production use case lab in your Docker training at least. 
+**It is your mail server**. It is Open Source. It is production ready. It is secure. It is fast. Zero initial configurations. It can be deployed in few minutes. It can be updated in few minutes. It is license free and limitless. Use it for your business. Earn money by selling support. Use it as a comprehensive production use case lab in your Docker training at least.
 
 At [Cybergate](https://cybergate.lk) our effort is to consolidate the best available open source email, collaboration, and email security solutions to provide you highly agile, secure, and enterprise ready world class, Open Source email and collaboration platform that can easily replace any other equivalent commercial alternative.
 
@@ -12,7 +12,7 @@ You can sync and share email, tasks, contacts, Calendars, GAL, and resource book
 
 ### Integrated Web UI
 
-Our administration **Web UI** is a fork of [Mailcow](https://mailcow.email/) project. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing.
+Our administration **Web UI**  started as  fork of [Mailcow](https://mailcow.email/) project and extending it with as we are adding new features. We are deeply indebted to their excellent effort in making such a good consolidation of all complex backend  email tools into a single pane of **Web UI** by making it very easy for administrators to manage the system without using complex command line tools and configuration file editing. The built-in Ldap Directory is based on OpenLDAP and web based UI from [FusionDirectory](https://www.fusiondirectory.org/)
 
 ### Running on Docker Containers and Cloud Ready
 
