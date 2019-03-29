@@ -16,7 +16,7 @@ Our administration **Web UI**  started as  fork of [Mailcow](https://mailcow.ema
 
 ### Running on Docker Containers and Cloud Ready
 
-All the backend applications of Openemail are running in Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
+All the backend applications of Openemail are running in **Docker Containers** by making Openemail a software that is ready to deploy in your private or public cloud infrastructure and utilize the benefit of agility and elasticity of modern day cloud computing.
 
 Following figure depicts how Openemail docker containers are interconnected internally and how they are being accessed externally.
 
