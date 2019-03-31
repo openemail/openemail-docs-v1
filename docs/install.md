@@ -154,16 +154,15 @@ networks:
 ## **Pull Openemail Docker Images**
 
 
-Pull the images and run the composer file. The parameter `-d` will start openemail docker containers detached:
+Run `install.sh`. It will pull the images and run the composer file and  start Openemail docker containers detached:
 ```
-docker-compose pull
-docker-compose up -d
+./install.sh
 ```
 ## **Accessing Openemail Web UI**
 
-You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` + password `openemail`
+You can now access **https://${OPENEMAIL_HOSTNAME}** with the default credentials `admin` and  password `openemail`
 
-For an example: https://hasuna.openemail.io
+For an example: https://mail.openemail.io
 
 The database will be initialized right after a connection to MySQL can be established.
 
