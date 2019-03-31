@@ -151,7 +151,7 @@ networks:
       com.docker.network.driver.mtu: 1450
     ...
 ```
-## **Pull Openemail Docker Images**
+## **Pull Openemail Docker Images and Start**
 
 
 Run `install.sh`. It will pull the images and run the composer file and  start Openemail docker containers detached:
