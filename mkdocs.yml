@@ -7,8 +7,8 @@ edit_uri: edit/master/docs/
 theme:
   name: 'material'
   palette:
-    primary: 'teal'
-    accent: 'light green'
+    primary: 'blue'
+    accent: 'light blue'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
